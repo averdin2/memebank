@@ -11,6 +11,31 @@ The Memebank system architecture is comprised of a React.js graphical user inter
 
 ## 5.2	CSCI Component Breakdown
 
+CSCI Memebank is composed of the following CSCs:
+
+- 5.2.1 Front End CSC -- web-based GUI for Memebank
+
+  - 5.2.1.1 Login/Join CSU -- page for users to log in or sign up for a Memebank account
+    - 5.2.1.1.1 Login/Join input module -- input fields for username and password
+    - 5.2.1.1.2 Login submit button -- button sends input to server for a login
+    - 5.2.1.1.2 Join submit button -- button sends input to server for a join
+  - 5.2.1.2 Bank CSU -- page for users to view and manage their banks
+    - 5.2.1.2.1 Bank list module -- displays the user's banks
+      - 5.2.1.2.1.1 Bank icon button -- button to take user to specified bank
+      - 5.2.1.2.1.2 New bank button -- button to create a new bank
+        - 5.2.1.2.1.2.1 New bank modal module -- presents input fields for creating new bank
+    - 5.2.1.2.2 Bank info module -- displays basic information of the selected bank
+      - 5.2.1.2.2.1 Tag list module -- displays list of link tags in the bank
+        - 5.2.1.2.2.1.1 Tag selection button -- selectively displays links in the bank of the selected tag
+    - 5.2.1.2.3 Bank display module -- displays stored links in a grid
+      - 5.2.1.2.3.1 Link display module -- shows the tags and content of the link
+    - 5.2.1.2.4 Link input module -- input field for adding new links to a bank
+      - 5.2.1.2.4.1 Link input modal module -- presents input fields for adding new links
+        - 5.2.1.2.4.1.1 Link preview module -- displays a preview of how a link will appear in a bank
+        - 5.2.1.2.4.1.2 Tag input module -- input field for adding tags to a link
+    - 5.2.1.2.5 User display module -- displays list of users with access to the selected bank
+      - 5.2.1.2.5.1 User input field module -- input field for granting users access to a bank
+
 ## 5.3	Functional Requirements by CSC
 
 ### 5.3.1	Frontend
