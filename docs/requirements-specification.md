@@ -36,12 +36,12 @@ CSCI Memebank is composed of the following CSCs:
         - 5.2.1.2.4.1.2 Tag input module -- input field for adding tags to a link
     - 5.2.1.2.5 User display module -- displays list of users with access to the selected bank
       - 5.2.1.2.5.1 User input field module -- input field for granting users access to a bank
-      
+
   TODO:
   - 5.2.2 Server CSC
   - 5.2.3 Database CSC
-    
-## 5.3	Functional Requirements by CSC
+
+## 5.3	Functional Requirements
 
 ### 5.3.1	Frontend
   - 5.3.1.1 The Frontend shall display a login page for the user
@@ -62,9 +62,17 @@ CSCI Memebank is composed of the following CSCs:
   - 5.3.1.8 The Frontend shall display a link input modal module
     - 5.3.1.8.1 The Frontend shall display input forms for users to type their links
     - 5.3.1.8.2 The Frontend shall display image previews of the links
-### 5.3.2	Backend
 
-TODO: Backend
+### 5.3.2	Backend
+  - 5.3.2.1 The Backend shall respond to HTTP requests from the Frontend correctly.
+  - 5.3.2.2 The Backend shall make a network connection with the database.
+  - 5.3.2.3 The Backend shall send all Frontend based queries into their respective databases
+  - 5.3.2.4 The Backend shall send all results of database queries to the Frontend.
+  - 5.3.2.5 The Backend shall authenticate users.
+  - 5.3.2.6 The Backend shall perform data validation before sending queries to the database.
+  - 5.3.2.7 The Backend shall throw a 404 error code when a page is not found.
+  - 5.3.2.8 The Backend shall throw a 500 error code when there is an unknown issue with the server.
+  - 5.3.2.9 The Backend shall throw a 503 error code if the overloaded or server is under maintenance
 
 ### 5.3.3	Database
   - 5.3.3.1 The database shall have a table containing data about each bank
@@ -109,20 +117,20 @@ TODO: Backend
     - 5.4.6.1 Saving a meme in the bank should not take longer than saving the meme on their computer directly.
     - 5.4.6.2 Deleting a meme from the meme bank should not take longer than deleting the file on their computer.
     - 5.4.6.3 Adding or removing a tag to a meme should not take longer than 0.3 seconds.
- 
+
 ## 5.5	Project Environment Requirements
 
 ### 5.5.1	Development Environment Requirements
 Hardware Requirements
-  
+
 | Category | Requirement |
 |---|---|
 | Processor | i6 6700k |
 | Graphics Card | Intel(R) HD Graphics 4600 |
 | Ram | 32 |
-  
+
 Software Requirements
-  
+
 | Category | Requirement |
 |---|---|
 | Front End | React.js |
