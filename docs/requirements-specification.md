@@ -10,11 +10,9 @@ Memebank's primary function is to store users' links in a database. Through its 
 The Memebank system architecture is comprised of a React.js graphical user interface, a Ruby on Rails server, and a SQLite database.
 
 ## 5.2	CSCI Component Breakdown
-
 CSCI Memebank is composed of the following CSCs:
 
 - 5.2.1 Front End CSC -- web-based GUI for Memebank
-
   - 5.2.1.1 Login/Join CSU -- page for users to log in or sign up for a Memebank account
     - 5.2.1.1.1 Login/Join input module -- input fields for username and password
     - 5.2.1.1.2 Login submit button -- button sends input to server for a login
@@ -75,23 +73,23 @@ CSCI Memebank is composed of the following CSCs:
   - 5.3.2.9 The Backend shall throw a 503 error code if the overloaded or server is under maintenance
 
 ### 5.3.3	Database
-  - 5.3.3.1 The database shall have a table containing data about each bank
-    - 5.3.3.1.1 The database shall contain the user of each bank
-      - 5.3.3.1.1.1 The database shall have a list of users who have access to each bank
-    - 5.3.3.1.2 The database shall contain the memes in each bank
-    - 5.3.3.1.3 The database shall hold the tags in each bank
-  - 5.3.3.2 The database shall have a table containing info about each user
-    - 5.3.3.2.1 The database shall store each user's profile info (name, birthday, short bio)
-    - 5.3.3.2.2 The database shall store everyone who follows each user
-    - 5.3.3.2.3 The database shall store everyone each user follows
-  - 5.3.3.2 The database shall contain a table with info about each meme
-    - 5.3.3.2.1 The database shall contain a list of genres that each meme can be categorized under
-    - 5.3.3.2.2 The database shall store info about human responses to each meme
-      - 5.3.3.2.2.1 The database shall store the user that uploaded the meme
-      - 5.3.3.2.2.2 The database shall store all users that viewed the meme
-        - 5.3.3.2.2.2.1 The database shall have a list of users that 'liked' the meme
-        - 5.3.3.2.2.2.2 The database shall have a list of users that saved the meme to their own bank
-      - 5.3.3.2.2.3 The database shall store all 'tags' that the meme holds
+  - 5.3.3.1 The database will have a table containing data about each bank
+    - 5.3.3.1.1 The database will contain the user of each bank
+      - 5.3.3.1.1.1 The database will have a list of users who have access to each bank
+    - 5.3.3.1.2 The database will contain the memes in each bank
+    - 5.3.3.1.3 The database will hold the tags in each bank
+  - 5.3.3.2 The database will have a table containing info about each user
+    - 5.3.3.2.1 The database will store each user's profile info (name, birthday, short bio)
+    - 5.3.3.2.2 The database will store everyone who follows each user
+    - 5.3.3.2.3 The database will store everyone each user follows
+  - 5.3.3.2 The database will contain a table with info about each meme
+    - 5.3.3.2.1 The database will contain a list of genres that each meme can be categorized under
+    - 5.3.3.2.2 The database will store info about human responses to each meme
+      - 5.3.3.2.2.1 The database will store the user that uploaded the meme
+      - 5.3.3.2.2.2 The database will store all users that viewed the meme
+        - 5.3.3.2.2.2.1 The database will have a list of users that 'liked' the meme
+        - 5.3.3.2.2.2.2 The database will have a list of users that saved the meme to their own bank
+      - 5.3.3.2.2.3 The database will store all 'tags' that the meme holds
 
 ## 5.4	Performance Requirements by CSC
   - 5.4.1 User registration should be less than 3 minutes. Once the user registers
