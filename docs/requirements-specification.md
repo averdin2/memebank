@@ -34,10 +34,12 @@ CSCI Memebank is composed of the following CSCs:
         - 5.2.1.2.4.1.2 Tag input module -- input field for adding tags to a link
     - 5.2.1.2.5 User display module -- displays list of users with access to the selected bank
       - 5.2.1.2.5.1 User input field module -- input field for granting users access to a bank
-
-  TODO:
-  - 5.2.2 Server CSC
-  - 5.2.3 Database CSC
+- 5.2.2 Server CSC
+  - 5.2.2.1 Ruby on Rails CSU -- modules for handling http(s) connections and requests
+  - 5.2.2.2 API Routes CSU --  modules for handling API requests to the server and database 
+- 5.2.3 Database CSC
+  - 5.2.2.1 Rails Models CSU -- modules for filtering/modeling the data for storage in database
+  - 5.2.2.2 Querys CSU -- modules for handling queries on the database
 
 ## 5.3	Functional Requirements
 
