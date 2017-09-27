@@ -140,4 +140,6 @@ Software Requirements
 
 ### 5.5.2	Execution Environment Requirements
 
-TODO: 5.5.2
+| Category | Requirement |
+|---|---|
+| Operating System | Windows 10 / Mac OSX |
