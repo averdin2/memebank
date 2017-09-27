@@ -123,9 +123,9 @@ Hardware Requirements
 
 | Category | Requirement |
 |---|---|
-| Processor | i6 6700k |
+| 2 x 1,6 GHz CPU |
 | Graphics Card | Intel(R) HD Graphics 4600 |
-| Ram | 32 |
+| Ram | 8 GB |
 
 Software Requirements
 
