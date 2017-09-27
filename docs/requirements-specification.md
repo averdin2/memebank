@@ -80,10 +80,19 @@ CSCI Memebank is composed of the following CSCs:
       - 5.3.3.2.2.3 The database will store all 'tags' that the meme holds
 
 ## 5.4	Performance Requirements by CSC
-  - 5.4.1 User login verification should take 1 second or less. Once the user enters
+  - 5.4.1 User registration should be less than 3 minutes. Once the user registers
+  the web page should almost instantaneously take the user to their home page.
+  - 5.4.2 User login verification should take 1 second or less. Once the user enters
   their login credentials the web page should almost instantaneously take the user to their
   home page.
-
+  - 5.4.3 User logout should take less than 0.5 seconds. Once the user logs out, the web
+    directs the user to the login page.
+  - 5.4.5 Interaction with memebank should be instantaneous, or less than 0.5 seconds.
+    - 5.4.5.1 Creation of a new bank should be instantaneous.
+    - 5.4.5.2 Modification of a new bank should be instantaneous.
+    - 5.4.5.3 Deletion of a bank should be instantaneous.
+    
+ 
 ## 5.5	Project Environment Requirements
 
 ### 5.5.1	Development Environment Requirements
