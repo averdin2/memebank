@@ -43,6 +43,20 @@ CSCI Memebank is composed of the following CSCs:
 ### 5.3.2	Backend
 
 ### 5.3.3	Database
+  - 5.3.3.1 The database will have a table containing data about each bank
+    - 5.3.3.1.1 The database will contain the user of each bank
+    - 5.3.3.1.2 The database will contain the memes in each bank
+    - 5.3.3.1.3 The database will hold the tags in each bank
+  - 5.3.3.2 The database will have a table containing info about each user
+    - 5.3.3.2.1 The database will store each user's profile info (name, birthday, short bio)
+    - 5.3.3.2.2 The database will store everyone who follows each user
+    - 5.3.3.2.3 The database will store everyone each user follows
+  - 5.3.3.2 The database will contain a table with info about each meme
+    - 5.3.3.2.1 The database will contain a list of genres that each meme can be categorized under
+    - 5.3.3.2.2 The database will store info about human responses to each meme
+      - 5.3.3.2.2.1 The database will store the user that uploaded the meme
+      - 5.3.3.2.2.2 The database will store all users that 'liked' the meme
+      - 5.3.3.2.2.3 The database will store all 'tags' that the meme holds
 
 ## 5.4	Performance Requirements by CSC
 
