@@ -36,7 +36,11 @@ CSCI Memebank is composed of the following CSCs:
         - 5.2.1.2.4.1.2 Tag input module -- input field for adding tags to a link
     - 5.2.1.2.5 User display module -- displays list of users with access to the selected bank
       - 5.2.1.2.5.1 User input field module -- input field for granting users access to a bank
-
+      
+  TODO:
+  - 5.2.2 Server CSC
+  - 5.2.3 Database CSC
+    
 ## 5.3	Functional Requirements by CSC
 
 ### 5.3.1	Frontend
@@ -60,24 +64,26 @@ CSCI Memebank is composed of the following CSCs:
     - 5.3.1.8.2 The Frontend shall display image previews of the links
 ### 5.3.2	Backend
 
+TODO: Backend
+
 ### 5.3.3	Database
-  - 5.3.3.1 The database will have a table containing data about each bank
-    - 5.3.3.1.1 The database will contain the user of each bank
-      - 5.3.3.1.1.1 The database will have a list of users who have access to each bank
-    - 5.3.3.1.2 The database will contain the memes in each bank
-    - 5.3.3.1.3 The database will hold the tags in each bank
-  - 5.3.3.2 The database will have a table containing info about each user
-    - 5.3.3.2.1 The database will store each user's profile info (name, birthday, short bio)
-    - 5.3.3.2.2 The database will store everyone who follows each user
-    - 5.3.3.2.3 The database will store everyone each user follows
-  - 5.3.3.2 The database will contain a table with info about each meme
-    - 5.3.3.2.1 The database will contain a list of genres that each meme can be categorized under
-    - 5.3.3.2.2 The database will store info about human responses to each meme
-      - 5.3.3.2.2.1 The database will store the user that uploaded the meme
-      - 5.3.3.2.2.2 The database will store all users that viewed the meme
-        - 5.3.3.2.2.2.1 The database will have a list of users that 'liked' the meme
-        - 5.3.3.2.2.2.2 The database will have a list of users that saved the meme to their own bank
-      - 5.3.3.2.2.3 The database will store all 'tags' that the meme holds
+  - 5.3.3.1 The database shall have a table containing data about each bank
+    - 5.3.3.1.1 The database shall contain the user of each bank
+      - 5.3.3.1.1.1 The database shall have a list of users who have access to each bank
+    - 5.3.3.1.2 The database shall contain the memes in each bank
+    - 5.3.3.1.3 The database shall hold the tags in each bank
+  - 5.3.3.2 The database shall have a table containing info about each user
+    - 5.3.3.2.1 The database shall store each user's profile info (name, birthday, short bio)
+    - 5.3.3.2.2 The database shall store everyone who follows each user
+    - 5.3.3.2.3 The database shall store everyone each user follows
+  - 5.3.3.2 The database shall contain a table with info about each meme
+    - 5.3.3.2.1 The database shall contain a list of genres that each meme can be categorized under
+    - 5.3.3.2.2 The database shall store info about human responses to each meme
+      - 5.3.3.2.2.1 The database shall store the user that uploaded the meme
+      - 5.3.3.2.2.2 The database shall store all users that viewed the meme
+        - 5.3.3.2.2.2.1 The database shall have a list of users that 'liked' the meme
+        - 5.3.3.2.2.2.2 The database shall have a list of users that saved the meme to their own bank
+      - 5.3.3.2.2.3 The database shall store all 'tags' that the meme holds
 
 ## 5.4	Performance Requirements by CSC
   - 5.4.1 User registration should be less than 3 minutes. Once the user registers
@@ -125,3 +131,5 @@ Software Requirements
 
 
 ### 5.5.2	Execution Environment Requirements
+
+TODO: 5.5.2
