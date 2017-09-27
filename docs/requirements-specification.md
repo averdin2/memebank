@@ -87,11 +87,22 @@ CSCI Memebank is composed of the following CSCs:
   home page.
   - 5.4.3 User logout should take less than 0.5 seconds. Once the user logs out, the web
     directs the user to the login page.
-  - 5.4.5 Interaction with memebank should be instantaneous, or less than 0.5 seconds.
+  - 5.4.4 Account management should take less than 1
+     - 5.4.4.1 Changing profile picture should take less than 10 seconds. If it takes longer,
+     break out of the command and alert the user of an error.
+     - 5.4.4.2 Changing nickname should take less than 0.5 seconds.
+     - 5.4.4.2 Changing password should take less than 1 second.
+       - 5.4.4.2.1 Verification of password change should take 0.5 seconds.
+     - 5.4.4.3 Deleting an account should take less than 1 second.
+       - 5.4.4.3.1 Verification of deleting an account should take 0.5 seconds.
+  - 5.4.5 Interaction with bank should be instantaneous, or less than 0.5 seconds.
     - 5.4.5.1 Creation of a new bank should be instantaneous.
     - 5.4.5.2 Modification of a new bank should be instantaneous.
     - 5.4.5.3 Deletion of a bank should be instantaneous.
-    
+  - 5.4.6 Interaction with meme should not take a significant amount of time.
+    - 5.4.6.1 Saving a meme in the bank should not take longer than saving the meme on their computer directly.
+    - 5.4.6.2 Deleting a meme from the meme bank should not take longer than deleting the file on their computer.
+    - 5.4.6.3 Adding or removing a tag to a meme should not take longer than 0.3 seconds.
  
 ## 5.5	Project Environment Requirements
 
