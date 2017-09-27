@@ -87,12 +87,21 @@ CSCI Memebank is composed of the following CSCs:
 ## 5.5	Project Environment Requirements
 
 ### 5.5.1	Development Environment Requirements
-  - 5.5.1.1
-  Hardware Requirements
-  | Category | Requirement |
-  |---|---|
-  | Processor | i6 6700k |
-  | Graphics Card | Intel(R) HD Graphics 4600 |
-  | Ram | 32 |
+Hardware Requirements
+  
+| Category | Requirement |
+|---|---|
+| Processor | i6 6700k |
+| Graphics Card | Intel(R) HD Graphics 4600 |
+| Ram | 32 |
+  
+Software Requirements
+  
+| Category | Requirement |
+|---|---|
+| Front End | React.js |
+| Server | Ruby on Rails |
+| Database | SQLite |
+
 
 ### 5.5.2	Execution Environment Requirements
