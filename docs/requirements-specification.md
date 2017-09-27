@@ -60,11 +60,21 @@ CSCI Memebank is composed of the following CSCs:
 ### 5.3.3	Database
 
 ## 5.4	Performance Requirements by CSC
+  - 5.4.1 User login verification should take 1 second or less. Once the user enters
+  their login credentials the web page should almost instantaneously take the user to their
+  home page.
 
 ## 5.5	Project Environment Requirements
 
 ### 5.5.1	Development Environment Requirements
+Hardware Requirements
+| Category | Requirement |
+|---|---|
+| Processor | i6 6700k |
+| Graphics Card | Intel(R) HD Graphics 4600 |
+| Ram | 32 |
 
+Software Requirements
 | Category | Requirement |
 |---|---|
 | Front End | React.js |
