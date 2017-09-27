@@ -27,6 +27,7 @@ CSCI Memebank is composed of the following CSCs:
     - 5.2.1.2.2 Bank info module -- displays basic information of the selected bank
       - 5.2.1.2.2.1 Tag list module -- displays list of link tags in the bank
         - 5.2.1.2.2.1.1 Tag selection button -- selectively displays links in the bank of the selected tag
+        - 5.2.1.2.2.1.2 Tag search field module -- input field for searching tags associated with selected bank
     - 5.2.1.2.3 Bank display module -- displays stored links in a grid
       - 5.2.1.2.3.1 Link display module -- shows the tags and content of the link
     - 5.2.1.2.4 Link input module -- input field for adding new links to a bank
@@ -44,17 +45,19 @@ CSCI Memebank is composed of the following CSCs:
     - 5.3.1.1.2 The Frontend shall provide error checking on text entered in fields upon clicking the login button.
     - 5.3.1.1.3 The Frontend shall display a sign up button.
       - 5.3.1.1.3.1 The Frontend shall provide another text entry field for confirming password of new user.
-  - 5.3.1.2 The Frontend shall direct users to the home page (Bank CSU Page) after successful login.
+  - 5.3.1.2 The Frontend shall direct users to the bank CSU page after a successful login.
   - 5.3.1.3 The Frontend shall display the Bank list module on the left side of the page
     - 5.3.1.3.1 The Frontend shall display a new bank button at the top of the list of banks.
       - 5.3.1.3.1.1 The Frontend shall provide text entry fields for the user to create a new bank with their own configurations.
-  - 5.3.1.4 The Frontend shall react to mouse clicks on displayed buttons
-  - 5.3.1.5 The Frontend shall provide a text entry field at the top and center of the page.
-    - 5.3.1.5.1 The Frontend shall provide the ability to make queries on a Database
-  - 5.3.1.6 The Frontend shall display the Bank display module under the search text entry field in the center of the page.
-  - 5.3.1.7 The Frontend shall display a link input modal module
-    - 5.3.1.7.1 The Frontend shall display input forms for users to type their links
-    - 5.3.1.7.2 The Frontend shall display image previews of the links
+  - 5.3.1.4 The Frontend shall display the tag list module to the right of the bank list module on the left side of the page
+    - 5.3.1.4.1 The Frontend  shall provide users the ability to choose which tags they wish to filter
+  - 5.3.1.5 The Frontend shall react to mouse clicks on displayed buttons
+  - 5.3.1.6 The Frontend shall provide a text entry field at the top and center of the page.
+    - 5.3.1.6.1 The Frontend shall provide the ability to make queries on a Database
+  - 5.3.1.7 The Frontend shall display the Bank display module under the search text entry field in the center of the page.
+  - 5.3.1.8 The Frontend shall display a link input modal module
+    - 5.3.1.8.1 The Frontend shall display input forms for users to type their links
+    - 5.3.1.8.2 The Frontend shall display image previews of the links
 ### 5.3.2	Backend
 
 ### 5.3.3	Database
