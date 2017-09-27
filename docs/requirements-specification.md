@@ -95,11 +95,4 @@ CSCI Memebank is composed of the following CSCs:
   | Graphics Card | Intel(R) HD Graphics 4600 |
   | Ram | 32 |
 
-Software Requirements
-| Category | Requirement |
-|---|---|
-| Front End | React.js |
-| Server | Ruby on Rails |
-| Database | SQLite |
-
 ### 5.5.2	Execution Environment Requirements
