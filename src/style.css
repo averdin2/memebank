@@ -1,0 +1,10 @@
+body {
+  font-family: Helvetica;
+  font-size: 16px;
+  margin: 0;
+  color: #444;
+}
+
+a:hover {
+  cursor: pointer;
+}
