@@ -59,23 +59,13 @@ CSCI Memebank is composed of the following CSCs:
 
 ### 5.3.3	Database
   - 5.3.3.1 The database will have a table containing data about each bank
-    - 5.3.3.1.1 The database will contain the user of each bank
-      - 5.3.3.1.1.1 The database will have a list of users who have access to each bank
-    - 5.3.3.1.2 The database will contain the memes in each bank
-    - 5.3.3.1.3 The database will hold the tags in each bank
-  - 5.3.3.2 The database will have a table containing info about each user
-    - 5.3.3.2.1 The database will store each user's profile info (name, birthday, short bio)
-    - 5.3.3.2.2 The database will store everyone who follows each user
-    - 5.3.3.2.3 The database will store everyone each user follows
-  - 5.3.3.2 The database will contain a table with info about each meme
-    - 5.3.3.2.1 The database will contain a list of genres that each meme can be categorized under
-    - 5.3.3.2.2 The database will store info about human responses to each meme
-      - 5.3.3.2.2.1 The database will store the user that uploaded the meme
-      - 5.3.3.2.2.2 The database will store all users that viewed the meme
-        - 5.3.3.2.2.2.1 The database will have a list of users that 'liked' the meme
-        - 5.3.3.2.2.2.2 The database will have a list of users that saved the meme to their own bank
-      - 5.3.3.2.2.3 The database will store all 'tags' that the meme holds
-
+  - 5.3.3.2 The database will contain data about the owner of each bank
+  - 5.3.3.3 The database will have a list of users who have access to each bank
+  - 5.3.3.4 The database will contain data about the links in each bank
+  - 5.3.3.5 The database will contain data about the tags in each bank
+  - 5.3.3.6 The database will have a table containing info about each user
+  - 5.3.3.7 The database will contain a table with the metadata and tags of each link
+  
 ## 5.4	Performance Requirements by CSC
   - 5.4.1 User registration should be less than 3 minutes. Once the user registers
   the web page should almost instantaneously take the user to their home page.
