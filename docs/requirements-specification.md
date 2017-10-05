@@ -29,23 +29,22 @@ CSCI Memebank is composed of the following CSCs:
 
 ### 5.3.1	Frontend
   - 5.3.1.1 The Frontend shall display a login page for the user
-    - 5.3.1.1.1 The Frontend shall provide text entry fields into which the user may type their login information.
-    - 5.3.1.1.2 The Frontend shall provide error checking on text entered in fields upon clicking the login button.
-    - 5.3.1.1.3 The Frontend shall display a sign up button.
-      - 5.3.1.1.3.1 The Frontend shall provide another text entry field for confirming password of new user.
-  - 5.3.1.2 The Frontend shall direct users to the bank CSU page after a successful login.
-  - 5.3.1.3 The Frontend shall display the Bank list module on the left side of the page
-    - 5.3.1.3.1 The Frontend shall display a new bank button at the top of the list of banks.
-      - 5.3.1.3.1.1 The Frontend shall provide text entry fields for the user to create a new bank with their own configurations.
-  - 5.3.1.4 The Frontend shall display the tag list module to the right of the bank list module on the left side of the page
-    - 5.3.1.4.1 The Frontend  shall provide users the ability to choose which tags they wish to filter
-  - 5.3.1.5 The Frontend shall react to mouse clicks on displayed buttons
-  - 5.3.1.6 The Frontend shall provide a text entry field at the top and center of the page.
-    - 5.3.1.6.1 The Frontend shall provide the ability to make queries on a Database
-  - 5.3.1.7 The Frontend shall display the Bank display module under the search text entry field in the center of the page.
-  - 5.3.1.8 The Frontend shall display a link input modal module
-    - 5.3.1.8.1 The Frontend shall display input forms for users to type their links
-    - 5.3.1.8.2 The Frontend shall display image previews of the links
+  - 5.3.1.2 The Frontend shall provide text entry fields into which the user may type their login information.
+  - 5.3.1.3 The Frontend shall provide error checking on text entered in fields upon clicking the login button.
+  - 5.3.1.4 The Frontend shall display a sign up button.
+  - 5.3.1.5 The Frontend shall provide another text entry field for confirming password of new user.
+  - 5.3.1.6 The Frontend shall direct users to the Bank CSU page after a successful login.
+  - 5.3.1.7 The Frontend shall display the Bank list module on the left side of the page
+  - 5.3.1.8 The Frontend shall display a new bank button at the top of the list of banks.
+  - 5.3.1.9 The Frontend shall provide text entry fields for the user to create a new bank with their own configurations.
+  - 5.3.1.10 The Frontend shall display the tag list module to the right of the bank list module on the left side of the page
+  - 5.3.1.11 The Frontend  shall provide users the ability to choose which tags they wish to filter
+  - 5.3.1.12 The Frontend shall react to mouse clicks on displayed buttons
+  - 5.3.1.13 The Frontend shall provide a text entry field at the top and center of the page.
+  - 5.3.1.14 The Frontend shall provide the ability to make queries on a Database
+  - 5.3.1.15 The Frontend shall display the Bank display module under the search text entry field in the center of the page.
+  - 5.3.1.16 The Frontend shall display a link input modal module
+  - 5.3.1.17 The Frontend shall display image previews of the links
 
 ### 5.3.2	Backend
   - 5.3.2.1 The Backend shall respond to HTTP requests from the Frontend correctly.
