@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Login from './components/Login/Login';
 import './Home.css';
 
 export default class Home extends Component {
@@ -10,6 +11,12 @@ export default class Home extends Component {
     ];
 
     const title = <div id='title'><h1>{logo}</h1></div>;
-    return <div className='Home'>{title}</div>;
-  }
+    const login = <Login />;
+
+    const content = [
+      title,
+      login
+    ];
+    return <div className='Home'>{content}</div>;
+  } 
 }
