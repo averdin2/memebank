@@ -1,4 +1,4 @@
-#content {
+.Login {
   text-align: center;
 }
 
@@ -24,15 +24,15 @@
   padding: 0.5em;
   width: 8em;
   background-color: white;
-  border: 3px solid #ffccff;
-  color: #ffccff;
+  border: 3px solid #7cc6fe;
+  color: #7cc6fe;
 }
 
 #loginButton:hover {
-  background-color: #ffccff;
+  background-color: #7cc6fe;
   color: white;
   transition-duration: 0.5s;
-  border: 3px solid #ffccff;
+  border: 3px solid #7cc6fe;
 }
 
 #joinButton {
@@ -41,13 +41,13 @@
   padding: 0.5em;
   width: 8em;
   background-color: white;
-  border: 3px solid #7cc6fe;
-  color: #7cc6fe;
+  border: 3px solid #ffccff;
+  color: #ffccff;
 }
 
 #joinButton:hover {
-  background-color: #7cc6fe;
+  background-color: #ffccff;
   color: white;
   transition-duration: 0.5s;
-  border: 3px solid #7cc6fe;
+  border: 3px solid #ffccff;
 }
