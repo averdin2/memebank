@@ -3,11 +3,17 @@ import './Login.css';
 
 export default class Login extends Component {
   render = () => {
-  	const loginButton = <button>Login</button>;
-  	//const userName = <i
-  	const content = [
-  		loginButton,
-  	];
-  	return <div className='Login'>{content}</div>;
+    const userName = <input id="username" type="text" placeholder={"username"} name="name" />;
+    const password = <input id="password" type="text" placeholder={"password"} name="password" />;
+    const label = <label>{userName}{password}</label>;
+    const loginButton = <input id="loginButton" type="submit" value="Login" />
+    const joinButton = <button id="joinButton">Join</button>;
+    const loginForm = <form>{label}{loginButton}{joinButton}</form>;
+    
+
+    const content = [
+      loginForm
+    ];
+    return <div className='Login'>{content}</div>;
   } 
 }
