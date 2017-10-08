@@ -32,7 +32,7 @@
   background-color: #ffccff;
   color: white;
   transition-duration: 0.5s;
-  border: 3px solid white;
+  border: 3px solid #ffccff;
 }
 
 #joinButton {
@@ -49,5 +49,5 @@
   background-color: #7cc6fe;
   color: white;
   transition-duration: 0.5s;
-  border: 3px solid #white;
+  border: 3px solid #7cc6fe;
 }
