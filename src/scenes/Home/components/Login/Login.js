@@ -8,12 +8,8 @@ export default class Login extends Component {
     const label = <label>{userName}{password}</label>;
     const loginButton = <input id="loginButton" type="submit" value="Login" />
     const joinButton = <button id="joinButton">Join</button>;
-    const loginForm = <form>{label}{loginButton}{joinButton}</form>;
+    const loginForm = <form>{label}{joinButton}{loginButton}</form>;
     
-
-    const content = [
-      loginForm
-    ];
-    return <div className='Login'>{content}</div>;
-  } 
+    return <div className='Login'>{loginForm}</div>;
+  }
 }
