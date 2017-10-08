@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './Login.css';
+import './Home.css';
 
-export default class Login extends Component {
+export default class Home extends Component {
   render = () => {
 
     const logo = [
@@ -10,6 +10,6 @@ export default class Login extends Component {
     ];
 
     const title = <div id='title'><h1>{logo}</h1></div>;
-    return <div className='Login'>{title}</div>;
+    return <div className='Home'>{title}</div>;
   }
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Login from './scenes/Login/Login';
+import Login from './scenes/Home/Home';
 import './style.css';
 
 export default class Memebank extends Component {
