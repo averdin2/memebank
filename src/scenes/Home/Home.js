@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Login from './components/Login/Login';
+import Join from './components/Join/Join';
 import './Home.css';
 
 export default class Home extends Component {
@@ -12,11 +13,10 @@ export default class Home extends Component {
 
     const title = <div id='title'><h1>{logo}</h1></div>;
     const login = <Login />;
-
     const content = [
       title,
       login
     ];
     return <div className='Home'>{content}</div>;
-  } 
+  }
 }
