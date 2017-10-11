@@ -18,10 +18,7 @@ export default class FormButton extends Component {
       `}</style>
     );
 
-    console.log(style);
-
     const input = <input {...this.props} />;
-
 
     return <div className='FormButton'>{style}{input}</div>;
   }

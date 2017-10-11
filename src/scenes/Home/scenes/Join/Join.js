@@ -10,8 +10,8 @@ export default class Join extends Component {
     const fields = [
       <FormField placeholder={"Email"} />,
       <FormField placeholder={"Username"} />,
-      <FormField placeholder={"Password"} />,
-      <FormField placeholder={"Confirm Password"} />,
+      <FormField placeholder={"Password"} type='password' />,
+      <FormField placeholder={"Confirm Password"} type='password' />,
     ];
 
     const buttons = [

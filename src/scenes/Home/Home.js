@@ -5,10 +5,7 @@ import './Home.css';
 
 export default class Home extends Component {
   render = () => {
-    const content = [
-      <Login />,
-      <Join />,
-    ];
-    return <div className='Home'>{content}</div>;
+    const scene = <Login/>;
+    return <div className='Home'>{scene}</div>;
   }
 }

@@ -4,7 +4,7 @@ import './style.css';
 
 export default class Memebank extends Component {
   render = () => {
-    const content = <div id='content'><Home /></div>;
-    return <div className='Memebank'>{content}</div>;
+    const home = <Home/>;
+    return <div className='Memebank'>{home}</div>;
   }
 }

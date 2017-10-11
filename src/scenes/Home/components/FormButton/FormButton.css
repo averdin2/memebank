@@ -1,12 +1,12 @@
 .FormButton {
   margin: 1em 0.5em;
-  display: inline;
+  display: inline-block;
 }
 
 .FormButton > input {
-  font-size: 1.5em;
+  font-size: 1em;
   padding: 0.5em;
-  width: 8em;
+  width: 8.05em;
   background-color: white;
-  border: 3px solid;
+  border: 0.1em solid;
 }
