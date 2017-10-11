@@ -1,0 +1,12 @@
+.FormButton {
+  margin: 1em 0.5em;
+  display: inline;
+}
+
+.FormButton > input {
+  font-size: 1.5em;
+  padding: 0.5em;
+  width: 8em;
+  background-color: white;
+  border: 3px solid;
+}
