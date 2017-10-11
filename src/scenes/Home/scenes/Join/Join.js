@@ -15,7 +15,7 @@ export default class Join extends Component {
     ];
 
     const buttons = [
-      <FormButton id='join_button_1' color='#7cc6fe' value='Back' />,
+      <FormButton id='join_button_1' color='#7cc6fe' value='Back' onClick={this.props.toggle_page} />,
       <FormButton id='join_button_2' color='#ffccff' value='Join' type='submit' />,
     ];
 

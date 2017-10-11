@@ -13,7 +13,7 @@ export default class Login extends Component {
     ];
 
     const buttons = [
-      <FormButton id='login_button_1' color='#7cc6fe' value='Join' />,
+      <FormButton id='login_button_1' color='#7cc6fe' value='Join' onClick={this.props.toggle_page} />,
       <FormButton id='login_button_2' color='#ffccff' value='Login' type='submit' />,
     ];
 
