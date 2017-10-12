@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './SubmitInputBank.css';
 
 export default class SubmitInputBank extends Component {
   render = () => {

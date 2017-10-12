@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ViewBank from './components/ViewBank/ViewBank';
 import InputBank from './components/InputBank/InputBank';
+import './Bank.css';
 
 export default class Bank extends Component {
   render = () => {
