@@ -10,3 +10,7 @@
   background-color: white;
   border: 0.1em solid;
 }
+
+.FormButton > input:hover {
+  cursor: pointer;
+}
