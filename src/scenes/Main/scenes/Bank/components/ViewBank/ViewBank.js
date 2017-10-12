@@ -3,6 +3,7 @@ import Card from './components/Card/Card';
 
 export default class ViewBank extends Component {
   render = () => {
-    return <div className='ViewBank'></div>;
+    const card = <Card/>;
+    return <div className='ViewBank'>{card}</div>;
   }
 }
