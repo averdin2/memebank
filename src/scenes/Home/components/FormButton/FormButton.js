@@ -15,9 +15,14 @@ export default class FormButton extends Component {
           color: white;
           transition-duration: 0.1s;
         }
+
+        #${this.props.id}:active {
+          filter: brightness(90%);
+          transition-duration: 0.1s;
+        }
+
       `}</style>
     );
-
     const input = <input {...this.props} />;
 
     return <div className='FormButton'>{style}{input}</div>;
