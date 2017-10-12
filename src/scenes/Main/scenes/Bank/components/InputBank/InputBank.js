@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
+import SubmitInputBank from './components/SubmitInputBank/SubmitInputBank';
+import FieldInputBank from './components/FieldInputBank/FieldInputBank';
 
 export default class InputBank extends Component {
   render = () => {
-    return <div className='InputBank'></div>;
+    const field = <FieldInputBank/>;
+    const submit = <SubmitInputBank/>;
+    const content = [
+      field,
+      submit,
+    ];
+    return <div className='InputBank'>{content}</div>;
   }
 }

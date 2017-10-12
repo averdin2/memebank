@@ -9,4 +9,4 @@ export default class FormField extends Component {
 
 FormField.defaultProps = {
   type: 'text',
-}
+};

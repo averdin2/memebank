@@ -6,6 +6,10 @@ export default class Bank extends Component {
   render = () => {
     const view = <ViewBank/>;
     const input = <InputBank/>;
-    return <div className='Bank'></div>;
+    const content = [
+      view,
+      input,
+    ];
+    return <div className='Bank'>{content}</div>;
   }
 }
