@@ -17,7 +17,7 @@ export default class FormButton extends Component {
         }
 
         #${this.props.id}:active {
-          filter: brightness(105%);
+          filter: brightness(110%);
           transition-duration: 0.1s;
         }
 
