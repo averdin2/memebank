@@ -3,6 +3,6 @@ import './Card.css';
 
 export default class Card extends Component {
   render = () => {
-    return <div className='Card'></div>;
+    return <img className='Card' {...this.props} />;
   }
 }

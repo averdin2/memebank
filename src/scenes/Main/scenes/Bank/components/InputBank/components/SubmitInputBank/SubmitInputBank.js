@@ -3,7 +3,7 @@ import './SubmitInputBank.css';
 
 export default class SubmitInputBank extends Component {
   render = () => {
-    const button = <input type='submit' value='>>' />;
+    const button = <input type='button' value='>>' {...this.props} />;
     return <div className='SubmitInputBank'>{button}</div>;
   }
 }
