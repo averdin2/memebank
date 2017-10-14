@@ -20,16 +20,13 @@ export default class Bank extends Component {
       'https://scontent.fsan1-1.fna.fbcdn.net/v/t1.0-9/22310482_140053859960821_3473914751880482881_n.jpg?oh=98fda23654a4a122c6cfc0acc738b7df&oe=5A7E0382',
     ];
 
-    for (const src in test_memes) {
-      this.state.card_list.push(<Card src={test_memes[src]}/>);
-    }
+    test_memes.map(src => this.state.card_list.push(<Card src={src}/>));
   }
 
   add_card = (src) => {
     const new_card_list = this.state.card_list.slice();
-    new_card_list.push(<Card src={src}/>);
+    new_card_list.unshift(<Card src={src}/>);
     this.setState({ card_list: new_card_list });
-    console.log(this.state.card_list);
   }
   render = () => {
     const view = <ViewBank card_list={this.state.card_list}/>;

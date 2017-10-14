@@ -4,3 +4,8 @@
   bottom: 0.2em;
   position: fixed;
 }
+
+.ViewBank {
+  position: relative;
+  z-index: 0;
+}
