@@ -4,10 +4,7 @@ import StackGrid from 'react-stack-grid';
 
 export default class ViewBank extends Component {
   render = () => {
-    const card_list = [];
-    for (const src in this.props.card_list) {
-      card_list.push(<Card src={this.props.card_list[src]}/>);
-    }
+    const card_list = this.props.card_list;
     const grid = <StackGrid>{card_list}</StackGrid>;
     return <div className='ViewBank'>{grid}</div>;
   }
