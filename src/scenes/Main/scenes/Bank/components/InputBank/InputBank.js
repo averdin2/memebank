@@ -14,11 +14,15 @@ export default class InputBank extends Component {
   handle_submit = () => {
     this.props.add_card(this.state.input);
   }
+  handle_key_submit = (event) => {
+    if (event.key === 'Enter') {
+      this.handle_submit();
+    }
+  }
   render = () => {
-    const field = <FieldInputBank value={this.state.input} onChange={this.handle_input_change}/>;
+    const field = <FieldInputBank value={this.state.input} onChange={this.handle_input_change} onKeyPress={this.handle_key_submit}/>;
     const submit = <SubmitInputBank onClick={this.handle_submit}/>;
-    const form = <form>{field}{submit}</form>;
 
-    return <div className='InputBank'>{form}</div>;
+    return <div className='InputBank'>{field}{submit}</div>;
   }
 }
