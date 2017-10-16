@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 import ViewBank from './components/ViewBank/ViewBank';
-import InputBank from './components/InputBank/InputBank';
 import Card from './components/ViewBank/components/Card/Card';
+import InputBank from './components/InputBank/InputBank';
+
 import './Bank.css';
 
 export default class Bank extends Component {
-  constructor() {
-    super();
+
+  constructor(props) {
+    super(props);
     this.state = { card_list: [] };
+  }
+
+  componentWillMount() {
     const test_memes = [
       'https://scontent.fsan1-1.fna.fbcdn.net/v/t1.0-9/22448387_140390503260490_5599005195409214752_n.jpg?oh=8437843ad343646ebaf16882f1ab232d&oe=5A3D3B81',
       'https://scontent.fsan1-1.fna.fbcdn.net/v/t1.0-9/22406431_140250626607811_3521404222895044032_n.jpg?oh=4a033f55a6fbb5e2e0d3d8314f5eb09f&oe=5A7BD277',
@@ -28,13 +33,17 @@ export default class Bank extends Component {
     new_card_list.unshift(<Card src={src}/>);
     this.setState({ card_list: new_card_list });
   }
+
   render = () => {
+
     const view = <ViewBank card_list={this.state.card_list}/>;
     const input = <InputBank add_card={this.add_card}/>;
+
     const content = [
       view,
       input,
     ];
+
     return <div className='Bank'>{content}</div>;
   }
 }

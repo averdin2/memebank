@@ -4,8 +4,8 @@ import Join from './scenes/Join/Join';
 import './Home.css';
 
 export default class Home extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = { login_active: true };
   }
 
