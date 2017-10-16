@@ -4,22 +4,16 @@ import SubmitInputBank from './components/SubmitInputBank/SubmitInputBank';
 import './InputBank.css';
 
 export default class InputBank extends Component {
-
   constructor(props) {
     super(props);
     this.state = { input: '' };
   }
-
-  // validate_input = (input) => {
-  //   $.getJSON(input).then(({results}) => { console.log(results) });
-  // }
 
   handle_input_change = (e) => {
     this.setState({ input: e.target.value });
   }
 
   handle_submit = () => {
-    // this.validate_input(this.state.input);
     this.props.add_card(this.state.input);
     this.setState({ input: '' });
   }

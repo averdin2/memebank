@@ -6,7 +6,6 @@ import InputBank from './components/InputBank/InputBank';
 import './Bank.css';
 
 export default class Bank extends Component {
-
   constructor(props) {
     super(props);
     this.state = { card_list: [] };

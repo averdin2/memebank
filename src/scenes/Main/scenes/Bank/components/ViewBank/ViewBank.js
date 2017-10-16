@@ -14,7 +14,7 @@ export default class ViewBank extends Component {
     const content = [
       grid,
     ];
-    
-    return <div className='ViewBank'>{grid}</div>;
+
+    return <div className='ViewBank'>{content}</div>;
   }
 }
