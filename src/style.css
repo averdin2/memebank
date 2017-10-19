@@ -4,6 +4,10 @@ body {
   color: #444;
 }
 
+input:focus, select:focus, textarea:focus, button:focus {
+    outline: none;
+}
+
 a:hover {
   cursor: pointer;
 }
