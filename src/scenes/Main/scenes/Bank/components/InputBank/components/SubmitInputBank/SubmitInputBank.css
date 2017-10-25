@@ -12,7 +12,6 @@
 }
 
 .SubmitInputBank > input:active {
-  background-color: black;
-  color: white;
+  filter: brightness(80%);
   transition-duration: 0.1s;
 }

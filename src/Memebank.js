@@ -7,6 +7,6 @@ export default class Memebank extends Component {
   render = () => {
     const home = <Home/>;
     const main = <Main/>;
-    return <div className='Memebank'>{home}</div>;
+    return <div className='Memebank'>{main}</div>;
   }
 }
