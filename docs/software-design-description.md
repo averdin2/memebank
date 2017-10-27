@@ -10,6 +10,9 @@
 
 ### 6.2.1 Major Software Components Section
 
+The memebank graphical user interface will be constructed using React.js.
+Memebank will be using a Ruby on Rails server, and an SQLite database.
+
 ### 6.2.2 Major Software Interactions Section
 
 ### 6.2.3 Architectural Design Diagrams Section
