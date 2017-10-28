@@ -3,13 +3,23 @@
 ## 6.1	Introduction
 
 ### 6.1.1 System Objectives Section
-
+The system objective of meme bank is to server as a link storage site for memes
+that will be sorted by tags which makes it easier to find ones memes
+and be able to share your memes with friend. Our project will allow for users to easily
+add their memes to their bank. It will allow users to quickly access and retrieve
+their memes from their web browser.
 ### 6.1.2 Hardware, Software, and Human Interfaces Section
-
+| Interface Type | Interface Description |
+|---|---|
+| Human Interface | keyboard and mouse |
+| Human Interface | monitor |
+| Software | (fill in) |
+| Hardware | (fill in) |
 ## 6.2 Architectural Design Section
 
 The memebank graphical user interface will be constructed using React.js.
-Memebank will be using a Ruby on Rails server, and an SQLite database.
+Memebank will be using a Ruby on Rails server, and an SQLite database to store
+all its data.
 
 ### 6.2.1 Major Software Components Section
 
