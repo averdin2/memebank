@@ -13,6 +13,19 @@ Memebank will be using a Ruby on Rails server, and an SQLite database.
 
 ### 6.2.1 Major Software Components Section
 
+- Login Page
+  - A login page will be displayed to the user
+- Entry fields
+  - The Frontend shall provide text entry fields into which the user may type their login information.
+- Sign Up button
+  - A sign up button will be displayed to the user
+- Bank CSU Page
+- List Module
+- New Bank button
+- Tag List module
+- Tag Filter
+- New Link Field 
+- Image Preview
 
 ### 6.2.2 Major Software Interactions Section
 
