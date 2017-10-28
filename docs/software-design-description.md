@@ -103,22 +103,16 @@ all its data.
 
 ### 6.3.2 Detailed Interface Descriptions Section
 
-- Front End CSC -- web-based GUI for Memebank
-  - Login/Join CSU -- page for users to log in or sign up for a Memebank account
-  - Bank CSU -- page for users to view and manage their banks
-    - Bank list module -- displays the user's banks
-    - Bank info module -- displays basic information of the selected bank
-    - Tag list module -- displays searchable list of link tags in the ban
+- Front End CSC
+  - Login/Join CSU -- This page will allow the users the log in or sign up for a memebank account. There will be a form that will ask for the username and password, accompanied by the Login Button. When the user logs in to their account, they will be taken to the Bank Page. If the user chooses to Join, a new form will appear for the user to enter their information. When a new user joins, they will be taken to the Bank page displaying an empty meme bank.
+  - Bank CSU -- The Bank CSU will display the user's banks. The first bank displayed will automatically default to the user's first bank that was created. The bank will display all the cards/memes that are stored in that bank. The Bank CSU will also include a list of the other banks owned by the user, and all the information associated with the various banks.
+    - Bank list module -- The bank list module will be comprised of a list of all the user's banks. If the user clicks on one of the banks in the list, the view will change to display the cards that are in the newly selected bank.
+    - Bank info module -- The Bank info module will show the information regarding that particular bank.
+    - Tag list module --The Tag list module will display a list of tags that are associated with all of the user's memes. The tag list will have a filter and search bar associated with it. The user will be able to search the tag list to display all the memes that are associated with those particular tags.
     - Bank display module -- displays stored links in a grid
     - Link input module -- input field for adding new links to a bank
-      - Link input modal module -- presents input fields for adding new links
-    - User display module -- displays list of users with access to the selected bank
-- Server CSC
-  - Ruby on Rails CSU -- modules for handling http(s) connections and requests
-  - API Routes CSU --  modules for handling API requests to the server and database
-- Database CSC
-  - Rails Models CSU -- modules for filtering/modeling the data for storage in database
-  - queries CSU -- modules for handling queries on the database
+      - Link input module -- The Link input module will allow the user to paste a link to upload a new meme. The card will appear when the new meme is uploaded. If the user uploads a new meme, it will be added to the bank that is currently displayed.
+    - User display module -- The User display module will show the list of users that currently have access to the selected bank. The user can choose to add or remove users from a bank.
 
 ### 6.3.3 Detailed Data Structure Descriptions Section
 
