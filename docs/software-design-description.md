@@ -13,6 +13,13 @@ Memebank will be using a Ruby on Rails server, and an SQLite database.
 
 ### 6.2.1 Major Software Components Section
 
+
+### 6.2.2 Major Software Interactions Section
+
+### 6.2.3 Architectural Design Diagrams Section
+
+## 6.3 CSC and CSU Descriptions Section
+
 - Front End CSC -- web-based GUI for Memebank
   - Login/Join CSU -- page for users to log in or sign up for a Memebank account
   - Bank CSU -- page for users to view and manage their banks
@@ -29,12 +36,6 @@ Memebank will be using a Ruby on Rails server, and an SQLite database.
 - Database CSC
   - Rails Models CSU -- modules for filtering/modeling the data for storage in database
   - queries CSU -- modules for handling queries on the database
-
-### 6.2.2 Major Software Interactions Section
-
-### 6.2.3 Architectural Design Diagrams Section
-
-## 6.3 CSC and CSU Descriptions Section
 
 ### 6.3.1 Detailed Class Descriptions Section
 
