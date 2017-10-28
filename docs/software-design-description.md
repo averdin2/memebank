@@ -3,7 +3,7 @@
 ## 6.1	Introduction
 
 ### 6.1.1 System Objectives Section
-The system objective of meme bank is to server as a link storage site for memes
+The system objective of meme bank is to serve as a link storage site for memes
 that will be sorted by tags which makes it easier to find ones memes
 and be able to share your memes with friend. Our project will allow for users to easily
 add their memes to their bank. It will allow users to quickly access and retrieve
@@ -47,7 +47,15 @@ all its data.
 ## 6.3 CSC and CSU Descriptions Section
 
 ### 6.3.1 Detailed Class Descriptions Section
-
+- Front Page
+  - Login Class -- This class has the GUI for memebank's login page as well as sending the data to our database for authentication when logging in
+  - Join Class -- This class has the GUI for memebank's sign up page and also sends and saves the data to our database to register this user
+- Home Page
+  - View Bank -- This class is the GUI for each persons bank and contains a list of cards that are displayed to the user and can be narrowed down through the tag system. It also contains a search bar at the top to search through the cards as well as an insertion bar at the bottom that always the user to input a link that makes a new Card and adds it to your View Bank.
+    - Card Class -- This class makes an object for each meme and its properties such as the tags it contains.
+    - Toolbar Class -- Has the GUI for the specific user
+- Account Class -- Talks to our account Database the fetch user info and deals with stuff such as authentication, changing profile name and pictures, and deleting an account.
+- Bank Class -- Deals with the storage of memes and makes sure that the user is entering in a valid value, meaning that the link address given is valid. 
 ### 6.3.2 Detailed Interface Descriptions Section
 
 ### 6.3.3 Detailed Data Structure Descriptions Section
