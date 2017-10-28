@@ -30,12 +30,19 @@ all its data.
 - Sign Up button
   - A sign up button will be displayed to the user
 - Bank CSU Page
+  - This page will display the bank of memes
 - List Module
+  - This list module will display a list of banks
 - New Bank button
+  - This button will allow the user to create a new bank
 - Tag List module
+  - This will be a list of tags associated with the meme bank
 - Tag Filter
-- New Link Field 
+  - This filter option will allow the user to filter the memes by tags
+- New Link Field
+  - This field will allow a user to copy and paste a link to upload a meme
 - Image Preview
+  - An image preview will appear when a meme is uploaded
 
 ### 6.2.2 Major Software Interactions Section
 
@@ -69,7 +76,7 @@ all its data.
     - Card Class -- This class makes an object for each meme and its properties such as the tags it contains.
     - Toolbar Class -- Has the GUI for the specific user
 - Account Class -- Talks to our account Database the fetch user info and deals with stuff such as authentication, changing profile name and pictures, and deleting an account.
-- Bank Class -- Deals with the storage of memes and makes sure that the user is entering in a valid value, meaning that the link address given is valid. 
+- Bank Class -- Deals with the storage of memes and makes sure that the user is entering in a valid value, meaning that the link address given is valid.
 ### 6.3.2 Detailed Interface Descriptions Section
 
 ### 6.3.3 Detailed Data Structure Descriptions Section
