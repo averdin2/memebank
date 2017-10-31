@@ -116,6 +116,27 @@ all its data.
 
 ### 6.3.3 Detailed Data Structure Descriptions Section
 
+- User Data Structure
+  - User_id -- This is the index for individual user, this is unique.
+  - Email -- This is the user's email that the user inputs when they sign up for their account. This is used for the login and provides uniqueness for each users. Emails has to be unique and valid which our database would check and no email could be used twice to make a second account. It accepts any existing email format that seems similar to abc123@something.com. It is saved as a string in the database.
+  - Username -- This is user's username that does not have to be unique and the user can change any time they want. It is saved as a string in the database.
+  - Password -- This is user's password that the user inputs when they sign up for their account. It consists of special characters, letters, and numbers. It is saved as a string in the database.
+  - Created_at -- The date and timestamp that the user account was created at. This holds datetime value.
+  - Updated_at -- The date and timestamp that the user account has been modified at. This can be either change of password or username. This holds datetime value.
+
+- Bank Data Structure
+  - Title -- This is the name of the Bank, it does not have to be unique. This is a string value.
+  - Size -- Size is how many cards, or memes, that the bank holds. It would be incremented as images are added and decremented as images are removed. This holds an integer. 
+  - User_id -- This is a foreign key from the User Entity and will be referring to which user the bank is created and owned by. This is interger.
+  - Created_at -- The date and timestamp that the bank was created at. This holds datetime value.
+  - Updated_at -- The date and timestamp that the bank has been modified at. This can be either change of title by adding or removing cards from the bank. This holds datetime value.
+
+- Card Data Structure
+  - Src -- This is the a string source of the image, which usually takes in a url. 
+  - Bank_id -- This is a foreign key from the Bank Entity and will be referring to which bank the card is added in.
+  - Created_at -- The date and timestamp that the card was created at.
+  - Updated_at -- The date and timestamp that the card has been modified at. This can be either change of src for which bank it is contained in.
+
 ### 6.3.4 Detailed Design Diagrams Section
 
 ## 6.4 Database Design and Description Section
@@ -128,5 +149,7 @@ Each meme will be held and referred to the card it is contained in.
 ![Database Design ERD](software-design-description-erd.PNG)
 
 ### 6.4.2  Database Access Section
+
+
 
 ### 6.4.3  Database Security Section
