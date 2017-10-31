@@ -120,7 +120,12 @@ all its data.
 
 ## 6.4 Database Design and Description Section
 
+The memebank database contains user, bank, and meme entity with attributes and relations attached to each of them.
+Each meme will be held and referred to the card it is contained in.
+
 ### 6.4.1  Database Design ER Diagram Section
+
+![Database Design ERD](software-design-description-erd.PNG)
 
 ### 6.4.2  Database Access Section
 
