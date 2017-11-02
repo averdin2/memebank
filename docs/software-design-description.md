@@ -126,13 +126,13 @@ all its data.
 
 - Bank Data Structure
   - Title -- This is the name of the Bank, it does not have to be unique. This is a string value.
-  - Size -- Size is how many cards, or memes, that the bank holds. It would be incremented as images are added and decremented as images are removed. This holds an integer. 
+  - Size -- Size is how many cards, or memes, that the bank holds. It would be incremented as images are added and decremented as images are removed. This holds an integer.
   - User_id -- This is a foreign key from the User Entity and will be referring to which user the bank is created and owned by. This is interger.
   - Created_at -- The date and timestamp that the bank was created at. This holds datetime value.
   - Updated_at -- The date and timestamp that the bank has been modified at. This can be either change of title by adding or removing cards from the bank. This holds datetime value.
 
 - Card Data Structure
-  - Src -- This is the a string source of the image, which usually takes in a url. 
+  - Src -- This is the a string source of the image, which usually takes in a url.
   - Bank_id -- This is a foreign key from the Bank Entity and will be referring to which bank the card is added in.
   - Created_at -- The date and timestamp that the card was created at.
   - Updated_at -- The date and timestamp that the card has been modified at. This can be either change of src for which bank it is contained in.
@@ -141,8 +141,7 @@ all its data.
 
 ## 6.4 Database Design and Description Section
 
-The memebank database contains user, bank, and meme entity with attributes and relations attached to each of them.
-Each meme will be held and referred to the card it is contained in.
+The memebank database contains user, bank, and meme entity with attributes and relations attached to each of them. Each meme will be held and referred to the card it is contained in. The database we are using at the moment is SQLite, because the data we are keeping is so lightweight, but this is subject to change as we introduce image hosting and other heavyweight features. The engine we will likely switch to if that becomes the case is PostreSQL. The database itself is being designed in the standard of Ruby on Rails applications, which is to reflect the model entity created by the Ruby on Rails generator (the data structures listed before, in section 6.3.3, follow this standard).
 
 ### 6.4.1  Database Design ER Diagram Section
 
@@ -150,6 +149,14 @@ Each meme will be held and referred to the card it is contained in.
 
 ### 6.4.2  Database Access Section
 
-
+memebank's database access is handled through two main methods:
+- Automatic queries:
+  - These are the queries performed when automatically creating the database and when there is data being added to, modified, or removed from the database.
+  - Any person who uses the application is using this method to manipulate the database.
+- Migrations:
+  - These are queries created manually using Rails' database (domain specific language). They allow you to change the database schema without disturbing the application or the data.
+  - Anyone who has access to development of the application has the ability to perform migrations.
 
 ### 6.4.3  Database Security Section
+
+The security of the database of the application is being handled by Rails' protections that are built in (simple examples of which are found in section 6.4.2) and by Doorkeeper a Rails gem that provides the OAuth2 implementation for our application. OAuth uses token-based and encrypted authentication to check that the correct clients are accessing their permitted data.
