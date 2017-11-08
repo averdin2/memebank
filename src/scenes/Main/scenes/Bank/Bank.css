@@ -1,8 +1,10 @@
 .InputBank {
   text-align: center;
-  width: 100%;
+  width: 98%;
   bottom: 0.2em;
   position: fixed;
+  margin-left: 12px;
+  margin-bottom: 10px;
 }
 
 .ViewBank {
