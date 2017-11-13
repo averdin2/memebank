@@ -1,0 +1,10 @@
+.FieldInputBank {
+  display: table-cell;
+  overflow: hidden;
+  vertical-align: top;
+  width: 100%;
+}
+
+.SubmitInputBank {
+  display: table-cell;
+}

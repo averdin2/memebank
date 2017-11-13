@@ -1,0 +1,12 @@
+.InputBank {
+  position: fixed;
+  bottom: 0.2em;
+  width: 99%;
+  margin-left: 0.5%;
+  margin-bottom: 0.2em;
+}
+
+.ViewBank {
+  position: relative;
+  z-index: 0;
+}
