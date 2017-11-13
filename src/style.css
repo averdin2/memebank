@@ -2,6 +2,7 @@ body {
   font-family: Helvetica;
   margin: 0;
   color: #444;
+  background-color: #92A8D1;
 }
 
 input:focus, select:focus, textarea:focus, button:focus {

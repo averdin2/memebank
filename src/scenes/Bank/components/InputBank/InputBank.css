@@ -1,6 +1,6 @@
 .FieldInputBank {
   display: table-cell;
-  overflow: hidden;
+  overflow: visible;
   vertical-align: top;
   width: 100%;
 }

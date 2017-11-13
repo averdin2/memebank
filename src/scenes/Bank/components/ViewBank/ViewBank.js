@@ -6,9 +6,14 @@ import Card from './components/Card/Card';
 
 export default class ViewBank extends Component {
 
-  // Create a Card component with input source
+  // Create a Card component with input as src
   stuffCard = (src, key) => {
     return <Card key={key} src={src} />;
+  }
+
+  // Update layout
+  updateLayout = () => {
+    this.grid.updateLayout();
   }
 
   render () {
@@ -28,30 +33,46 @@ export default class ViewBank extends Component {
       'https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/23473047_2009989005995040_6117660060663808009_n.jpg?oh=1df3fedf0b5f31875eb5c1badc30b169&oe=5A66796B',
       'https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/23472728_2009988529328421_3606640391025786311_n.jpg?oh=84054c51c456abea418e7c89fd044771&oe=5A992C9B',
       'https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/23319085_2009114682749139_1620154231016590417_n.jpg?oh=e7c795d162728cbaaac12dee41ce7c96&oe=5A9788FE',
-      'https://media.giphy.com/media/xT9IgEYXCNqPZnqMuY/giphy.gif',
-      'https://media.giphy.com/media/l4Ki4biBSwhjyrS48/giphy.gif',
       'https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/23561646_215907662282564_5559455452299414741_n.jpg?oh=24f95b14944c0abbc0d25f3d5e6667c8&oe=5A926584',
     ];
 
+    // Holds Card components to be rendered
     const cards = [];
 
+    // Stuff test links
     for (const i in testList) {
       cards.unshift(this.stuffCard(testList[i], i));
     }
 
+    cards.unshift(<iframe src='https://gfycat.com/ifr/HotScornfulGraywolf?referrer=https%3A%2F%2Fwww.redditmedia.com%2Fmediaembed%2F7cjtsa' frameborder='0' scrolling='no' width='100%' height='250' allowfullscreen></iframe>);
+
+    // Stuff stored links
     for (const i in this.props.cards) {
       cards.unshift(this.stuffCard(this.props.cards[i].src, i + cards.length));
     }
 
     // Properties of grid component
     const gridProps = {
+
+      // Set a reference for the grid instance :: this.grid
+      gridRef: grid => this.grid = grid,
+
+      // Resize image height on load
+      monitorImagesLoaded: true,
+
+      // Layout
       columnWidth: '33%',
       gutterWidth: 10,
       gutterHeight: 10,
+
+      // Animation
       duration: 1000,
+
+      // Layout updating :: this is a hack and needs to be changed to something else
+      onMouseMove: this.updateLayout,
     };
 
-    const grid = <StackGrid monitorImagesLoaded {...gridProps} >{cards}</StackGrid>;
+    const grid = <StackGrid {...gridProps} >{cards}</StackGrid>;
 
     return <div className='ViewBank'>{grid}</div>;
   }
