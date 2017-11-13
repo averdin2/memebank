@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Bank from './Bank';
+import _Bank from './Bank';
 
 // Actions
 import { addCard } from './actions';
@@ -16,9 +16,9 @@ const mapDispatchToProps = (dispatch, src) => {
   };
 };
 
-const VisibleBank = connect(
+const Bank = connect(
   mapStateToProps,
   mapDispatchToProps
-)(Bank);
+)(_Bank);
 
-export default VisibleBank;
+export default Bank;

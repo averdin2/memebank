@@ -7,7 +7,9 @@ import InputBank from './components/InputBank/InputBank';
 // Styles
 import './Bank.css';
 
-export default class Bank extends Component {
+export default class _Bank extends Component {
+  // Underscore prefix b/c it's passed to redux container
+  
   render () {
 
     // Properties of ViewBank component

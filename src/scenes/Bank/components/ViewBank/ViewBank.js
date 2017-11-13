@@ -5,9 +5,6 @@ import StackGrid from 'react-stack-grid';
 import Card from './components/Card/Card';
 
 export default class ViewBank extends Component {
-  constructor (props) {
-    super(props);
-  }
 
   // Create a Card component with input source
   stuffCard = (src, key) => {
@@ -37,7 +34,12 @@ export default class ViewBank extends Component {
       cardList.unshift(this.stuffCard(this.props.cards[i].src, i + cardList.length));
     }
 
-    const grid = <StackGrid columnWidth='25%' monitorImagesLoaded>{cardList}</StackGrid>;
+    // Properties of grid component
+    const gridProps = {
+      columnWidth: '25%'
+    };
+
+    const grid = <StackGrid monitorImagesLoaded {...gridProps} >{cardList}</StackGrid>;
 
     return <div className='ViewBank'>{grid}</div>;
   }
