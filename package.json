@@ -1,21 +1,24 @@
 {
   "name": "memebank",
   "version": "0.1.0",
-  "description": "a place to stash your memes",
-  "author": "woomfy",
-  "private": false,
+  "private": true,
   "dependencies": {
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "react-stack-grid": "^0.5.0"
-  },
-  "devDependencies": {
-    "react-scripts": "1.0.3"
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.17",
+    "redux": "^3.7.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.2",
+    "eslint": "^4.10.0",
+    "eslint-plugin-react": "^7.4.0"
   }
 }
