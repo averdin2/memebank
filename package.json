@@ -6,7 +6,8 @@
   "private": false,
   "dependencies": {
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-stack-grid": "^0.5.0"
   },
   "devDependencies": {
     "react-scripts": "1.0.3"

@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
+import './FieldInputBank.css';
 
 export default class FieldInputBank extends Component {
   render = () => {
-    return <input className='FieldInputBank' {...this.props} />;
+    const field = <input {...this.props} />
+    return <div className='FieldInputBank'>{field}</div>;
   }
 }
-
-FieldInputBank.defaultProps = {
-  type: 'text',
-};

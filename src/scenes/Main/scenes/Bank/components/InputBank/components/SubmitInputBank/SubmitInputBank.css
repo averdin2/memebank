@@ -1,0 +1,17 @@
+.SubmitInputBank > input {
+  width: 3em;
+  padding: 0.5em;
+  font-size: 1em;
+  background-color: white;
+  border: 0.1em solid #b3b3b3;
+}
+
+.SubmitInputBank > input:hover {
+  filter: brightness(90%);
+  transition-duration: 0.1s;
+}
+
+.SubmitInputBank > input:active {
+  filter: brightness(80%);
+  transition-duration: 0.1s;
+}

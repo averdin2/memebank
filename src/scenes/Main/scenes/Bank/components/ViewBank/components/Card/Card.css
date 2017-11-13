@@ -1,0 +1,7 @@
+.Card {
+  width: 100%;
+}
+
+.Card:hover {
+  cursor: pointer;
+}

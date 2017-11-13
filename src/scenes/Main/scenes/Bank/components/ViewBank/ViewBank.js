@@ -1,8 +1,20 @@
 import React, { Component } from 'react';
-import Card from './components/Card/Card';
+import StackGrid from 'react-stack-grid';
 
 export default class ViewBank extends Component {
   render = () => {
-    return <div className='ViewBank'></div>;
+
+    const grid_props = {
+      columnWidth: '20%',
+    }
+
+    const card_list = this.props.card_list;
+    const grid = <StackGrid {...grid_props}>{card_list}</StackGrid>;
+
+    const content = [
+      grid,
+    ];
+
+    return <div className='ViewBank'>{content}</div>;
   }
 }
