@@ -9,7 +9,14 @@ import './Bank.css';
 
 export default class _Bank extends Component {
   // Underscore prefix b/c it's passed to redux container
-  
+
+  // Add card to bank
+  addCard = (src) => {
+    this.props.addCard(src);
+  }
+
+  addCardCallback
+
   render () {
 
     // Properties of ViewBank component
@@ -19,7 +26,7 @@ export default class _Bank extends Component {
 
     // Propertied of InputBank component
     const inputProps = {
-      addCard: this.props.addCard,
+      addCard: this.addCard,
     };
 
     const view = <ViewBank {...viewProps} />;

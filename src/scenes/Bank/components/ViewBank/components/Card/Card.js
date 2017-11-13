@@ -17,10 +17,6 @@ export default class Card extends Component {
       onClick: this.openSrc,
     };
 
-    return <img className='Card' {...this.props} {...cardProps} />;
+    return <img className='Card' alt='' {...this.props} {...cardProps} />;
   }
 }
-
-Card.defaultProps = {
-  alt: '',
-};

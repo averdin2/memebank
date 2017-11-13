@@ -22,24 +22,36 @@ export default class ViewBank extends Component {
       'https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/23434730_1120243021448207_5698947967030120206_n.jpg?oh=65b9adce8c5ed419cc163675a65e2bc3&oe=5A98DE88',
       'https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/23376159_1120242831448226_2512118175480590559_n.jpg?oh=8319ef8a1119b1b87ca92fdfc63bbded&oe=5A9C267A',
       'https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/23434907_1120242598114916_5844990629720809884_n.jpg?oh=5cc369926bf6a6629450efb89942d02d&oe=5AAB964B',
+      'https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/23376439_752444558281583_1297364718323175561_n.jpg?oh=29954fe38d8d12017eb8f0c48c61b627&oe=5AA95DC6',
+      'https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/23517635_2009989402661667_2971602636033065708_n.jpg?oh=d51ef70a4415ae5733d05f37c48f0bb2&oe=5AAA3375',
+      'https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/23517538_2009989179328356_4120578929519047963_n.jpg?oh=7cc7eaeef69fa46b776ac5e74aa7d298&oe=5A621F98',
+      'https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/23473047_2009989005995040_6117660060663808009_n.jpg?oh=1df3fedf0b5f31875eb5c1badc30b169&oe=5A66796B',
+      'https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/23472728_2009988529328421_3606640391025786311_n.jpg?oh=84054c51c456abea418e7c89fd044771&oe=5A992C9B',
+      'https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/23319085_2009114682749139_1620154231016590417_n.jpg?oh=e7c795d162728cbaaac12dee41ce7c96&oe=5A9788FE',
+      'https://media.giphy.com/media/xT9IgEYXCNqPZnqMuY/giphy.gif',
+      'https://media.giphy.com/media/l4Ki4biBSwhjyrS48/giphy.gif',
+      'https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/23561646_215907662282564_5559455452299414741_n.jpg?oh=24f95b14944c0abbc0d25f3d5e6667c8&oe=5A926584',
     ];
 
-    const cardList = [];
+    const cards = [];
 
     for (const i in testList) {
-      cardList.unshift(this.stuffCard(testList[i], i));
+      cards.unshift(this.stuffCard(testList[i], i));
     }
 
     for (const i in this.props.cards) {
-      cardList.unshift(this.stuffCard(this.props.cards[i].src, i + cardList.length));
+      cards.unshift(this.stuffCard(this.props.cards[i].src, i + cards.length));
     }
 
     // Properties of grid component
     const gridProps = {
-      columnWidth: '25%'
+      columnWidth: '33%',
+      gutterWidth: 10,
+      gutterHeight: 10,
+      duration: 1000,
     };
 
-    const grid = <StackGrid monitorImagesLoaded {...gridProps} >{cardList}</StackGrid>;
+    const grid = <StackGrid monitorImagesLoaded {...gridProps} >{cards}</StackGrid>;
 
     return <div className='ViewBank'>{grid}</div>;
   }
