@@ -15,8 +15,6 @@ export default class _Bank extends Component {
     this.props.addCard(src);
   }
 
-  addCardCallback
-
   render () {
 
     // Properties of ViewBank component

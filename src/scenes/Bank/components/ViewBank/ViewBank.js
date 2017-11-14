@@ -44,7 +44,7 @@ export default class ViewBank extends Component {
       cards.unshift(this.stuffCard(testList[i], i));
     }
 
-    cards.unshift(<iframe src='https://gfycat.com/ifr/HotScornfulGraywolf?referrer=https%3A%2F%2Fwww.redditmedia.com%2Fmediaembed%2F7cjtsa' frameborder='0' scrolling='no' width='100%' height='250' allowfullscreen></iframe>);
+    cards.unshift(<iframe key={cards.length + 1} src='https://gfycat.com/ifr/HotScornfulGraywolf?referrer=https%3A%2F%2Fwww.redditmedia.com%2Fmediaembed%2F7cjtsa' title='backflip' frameBorder='0' scrolling='no' width='100%' height='250' allowFullScreen></iframe>);
 
     // Stuff stored links
     for (const i in this.props.cards) {
