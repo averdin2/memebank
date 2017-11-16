@@ -1,0 +1,31 @@
+
+Hi, MemeBank team ----
+
+Very nice work on this Preliminary SDD!
+
+Figure 1 is quite nice, and figure 2 shows the top-level use cases well.
+
+A couple of nit-picky things I noticed:
+1) Make sure you refer to your project in a uniform way.  Sometimes you say
+   "meme bank", sometimes "Meme bank", sometimes "memebank", and so on.
+2) In the introduction, you might include a sentence that defines exactly
+   what a "meme" is, specifically in the context of your project.  This would
+   be something good to include in presentations, as well.
+3) Be sure to check your grammar throughout; for example, in section 6.1.1
+   you have "...easier to find ones memes and be...." which should be
+   "...easier to find one's memes and be..."
+4) Section 6.2.2 is supposed to reflect interactions between the *software*
+   components of the system.  For example, you have the login page being
+   displayed to the user, but you should focus on HOW the login page will
+   *interact with the system components to which it is connected [like the
+   user table in the database?]
+5) The ERD looks great!
+
+Great job overall -- you guys put a lot of work into this, and it shows!
+
+Fix these items in the next release for full credit on the document.
+
+You have 10% out of 10% which is an A-plus.
+
+Regards,
+Prof. Johnson
