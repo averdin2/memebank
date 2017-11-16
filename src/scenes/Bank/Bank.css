@@ -28,5 +28,8 @@
   /*Position*/
   position: relative;
   z-index: 0;
-  
+
+  /*Margins*/
+  margin-bottom: 15%;
+
 }

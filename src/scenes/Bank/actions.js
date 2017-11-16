@@ -1,6 +1,7 @@
 /* Action Types */
 export const ActionTypes = {
-  ADD_CARD: 'ADD_CARD'
+  ADD_CARD: 'ADD_CARD',
+  GET_CARD_DATA_RECIEVED: 'GET_CARD_DATA_RECIEVED',
 };
 
 /* Actions */

@@ -10,6 +10,12 @@ const cards = (state = [], action) => {
   case ActionTypes.ADD_CARD:
     return [...state, { src: action.src }];
 
+  // Recieve card data from API
+  case ActionTypes.GET_CARD_DATA_RECIEVED:
+    return action.cards;
+
+  // TO DO: case for GET_CARD_DATA_ERROR
+
   // Default case: return current state
   default:
     return state;

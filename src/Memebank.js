@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 
 // Redux
-import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import {
+  createStore,
+  applyMiddleware
+} from 'redux';
 
 // React-Router
 import {
@@ -19,11 +22,14 @@ import Bank from './scenes/Bank/containers.js';
 // Reducers
 import Root from './reducers.js';
 
+// Middleware
+import bankService from './scenes/Bank/services.js';
+
 // Styles
 import './style.css';
 
 // Create store for application state
-const store = createStore(Root);
+const store = createStore(Root, {}, applyMiddleware(bankService));
 
 export default class Memebank extends Component {
   render () {
@@ -41,3 +47,6 @@ export default class Memebank extends Component {
     return <Provider store={store}><div className='Memebank'>{router}</div></Provider>;
   }
 }
+
+// Initialize
+store.dispatch({ type: 'GET_CARD_DATA' });
