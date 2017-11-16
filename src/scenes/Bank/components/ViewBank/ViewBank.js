@@ -42,7 +42,7 @@ export default class ViewBank extends Component {
       // Layout
       columnWidth: '33%',
       gutterWidth: 10,
-      gutterHeight: 5,
+      gutterHeight: 10,
 
       // Animation
       duration: 1000,

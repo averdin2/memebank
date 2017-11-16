@@ -10,11 +10,18 @@ export default class Card extends Component {
     window.open(this.props.src);
   }
 
+  // Text Cards
+  textCard = (props) => {
+    const textCardProps = {
+      ...props,
+    };
+    return <span className='Card' {...textCardProps}>Hello</span>;
+  }
+
   // Image Cards
   imageCard = (props) => {
     const imageCardProps = {
       ...props,
-      width: '100%',
     };
     return <img className='Card' alt='' {...imageCardProps} />;
   }
@@ -25,8 +32,7 @@ export default class Card extends Component {
       ...props,
       frameBorder: '0',
       scrolling: 'no',
-      width: '100%',
-      height: '100%',
+      height: '250px',
       allowFullScreen: true,
     };
     return <iframe className='Card' {...videoCardProps}></iframe>;
