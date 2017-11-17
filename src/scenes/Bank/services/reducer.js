@@ -14,7 +14,7 @@ const cards = (state = [], action) => {
     return action.cards;
 
   case ADD_CARD:
-    return [...state, { src: action.src, id: state.length + 1 }];
+    return [...state, { src: action.src }];
 
   default:
     return state;
