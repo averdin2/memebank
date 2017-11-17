@@ -8,7 +8,6 @@ import InputBank from './components/InputBank/InputBank';
 import './Bank.css';
 
 export default class _Bank extends Component {
-  // Underscore prefix b/c it's passed to redux container
 
   // Add card to bank
   addCard = (src) => {

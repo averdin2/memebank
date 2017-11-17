@@ -17,19 +17,19 @@ import {
 // Scenes
 import Login from './scenes/Login/Login';
 import Join from './scenes/Join/Join';
-import Bank from './scenes/Bank/containers.js';
+import Bank from './scenes/Bank/container.js';
 
 // Reducers
-import Root from './reducers.js';
+import Root from './reducer.js';
 
 // Middleware
-import bankService from './scenes/Bank/services.js';
+import bankMiddleware from './scenes/Bank/services/middleware.js';
 
 // Styles
 import './style.css';
 
 // Create store for application state
-const store = createStore(Root, {}, applyMiddleware(bankService));
+const store = createStore(Root, applyMiddleware(bankMiddleware));
 
 export default class Memebank extends Component {
   render () {

@@ -10,13 +10,25 @@ export default class Card extends Component {
     window.open(this.props.src);
   }
 
-  // Text Cards
-  textCard = (props) => {
-    const textCardProps = {
-      ...props,
-    };
-    return <span className='Card' {...textCardProps}>Hello</span>;
-  }
+  // // Text Cards
+  // textCard = (props) => {
+  //   const textCardProps = {
+  //     ...props,
+  //   };
+  //   return <span className='Card' {...textCardProps}>Hello</span>;
+  // }
+
+  // // Video Cards
+  // videoCard = (props) => {
+  //   const videoCardProps = {
+  //     ...props,
+  //     frameBorder: '0',
+  //     scrolling: 'no',
+  //     height: '250px',
+  //     allowFullScreen: true,
+  //   };
+  //   return <iframe className='Card' title='title' {...videoCardProps}></iframe>;
+  // }
 
   // Image Cards
   imageCard = (props) => {
@@ -24,18 +36,6 @@ export default class Card extends Component {
       ...props,
     };
     return <img className='Card' alt='' {...imageCardProps} />;
-  }
-
-  // Video Cards
-  videoCard = (props) => {
-    const videoCardProps = {
-      ...props,
-      frameBorder: '0',
-      scrolling: 'no',
-      height: '250px',
-      allowFullScreen: true,
-    };
-    return <iframe className='Card' {...videoCardProps}></iframe>;
   }
 
   render () {
