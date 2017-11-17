@@ -8,7 +8,7 @@ import {
 } from './actionTypes.js';
 
 const api = 'http://api.memebank.life/banks/1/cards';
-const validTypes = ['image/jpeg', 'image/png'];
+const validTypes = ['image/jpeg', 'image/png', 'image/gif'];
 
 const bankMiddleware = store => next => action => {
   next(action);
@@ -31,23 +31,23 @@ const bankMiddleware = store => next => action => {
       });
     break;
 
-  // NOT WORKING
-  case ADD_CARD:
-    request.post(api)
-      .send({ card: { src: action.src, bank_id: 1 } })
-      .end((err, res) => {
-        if (err) {
-          /* eslint-disable */
-          console.log('ADD_CARD fail');
-          /* eslint-enable */
-          return;
-        }
-        /* eslint-disable */
-        console.log('ADD_CARD success');
-        /* eslint-enable */
-        next({ type: GET_CARD_DATA });
-      });
-    break;
+  // // NOT WORKING
+  // case ADD_CARD:
+  //   request.post(api)
+  //     .send({ card: { src: action.src, bank_id: 1 } })
+  //     .end((err, res) => {
+  //       if (err) {
+  //         /* eslint-disable */
+  //         console.log('ADD_CARD fail');
+  //         /* eslint-enable */
+  //         return;
+  //       }
+  //       /* eslint-disable */
+  //       console.log('ADD_CARD success');
+  //       /* eslint-enable */
+  //       next({ type: GET_CARD_DATA });
+  //     });
+  //   break;
 
   case GET_CARD_DATA:
     request.get(api)
