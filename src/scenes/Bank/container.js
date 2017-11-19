@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
+import { addCard } from './services/actions.js';
 import _Bank from './Bank';
-import { validateAddCard } from './services/actions.js';
+
 
 const mapStateToProps = (state) => {
   return { cards: state.Bank.cards };
@@ -8,7 +9,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch, src) => {
   return {
-    addCard: (src) => { dispatch(validateAddCard(src)); }
+    addCard: (src) => { dispatch(addCard(src)); }
   };
 };
 

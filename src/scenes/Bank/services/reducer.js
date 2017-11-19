@@ -1,8 +1,7 @@
 import { combineReducers } from 'redux';
 import {
-  GET_CARD_DATA,
   GET_CARD_DATA_RECIEVED,
-  ADD_CARD
+  ADD_CARD_SUCCESS
 } from './actionTypes.js';
 
 /* Reducers */
@@ -13,7 +12,7 @@ const cards = (state = [], action) => {
   case GET_CARD_DATA_RECIEVED:
     return action.cards;
 
-  case ADD_CARD:
+  case ADD_CARD_SUCCESS:
     return [...state, { src: action.src }];
 
   default:
@@ -21,24 +20,8 @@ const cards = (state = [], action) => {
   }
 };
 
-const loading = (state = false, action) => {
-  switch (action.type) {
-
-  case ADD_CARD:
-    return true;
-
-  case GET_CARD_DATA:
-    return false;
-
-  default:
-    return state;
-
-  }
-};
-
 const Bank = combineReducers({
-  cards,
-  loading
+  cards
 });
 
 
