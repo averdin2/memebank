@@ -2,5 +2,6 @@
   width: 98%;
   padding: 0.5em;
   border: 0.1em solid #b3b3b3;
+  border-right: none;
   font-size: 1em;
 }

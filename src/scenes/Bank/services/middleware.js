@@ -12,7 +12,7 @@ import {
   addCardSuccess,
 } from './actions.js';
 
-const api = 'https://api.memebank.life/banks/1/cards';
+const api = 'http://localhost:8000/banks/1/cards';
 const validTypes = ['image/jpeg', 'image/png', 'image/gif'];
 
 const bankMiddleware = store => next => action => {
@@ -26,7 +26,6 @@ const bankMiddleware = store => next => action => {
         if (err) {
           /* eslint-disable */
           console.log('GET_CARD_DATA fail');
-          console.log(err);
           /* eslint-enable */
           return;
         }
@@ -59,7 +58,6 @@ const bankMiddleware = store => next => action => {
           .end((err, res) => {
             if (err) {
               /* eslint-disable */
-              console.log(err);
               console.log('ADD_CARD fail');
               /* eslint-enable */
 
