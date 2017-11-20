@@ -1,14 +1,14 @@
 .FormButton {
-  margin: 1em 0.5em;
   display: inline-block;
+  margin: 1em 0.5em;
 }
 
 .FormButton > input {
-  font-size: 1em;
-  padding: 0.5em;
   width: 8.05em;
+  padding: 0.5em;
   background-color: white;
   border: 0.1em solid;
+  font-size: 1em;
 }
 
 .FormButton > input:hover {

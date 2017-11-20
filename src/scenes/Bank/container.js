@@ -1,18 +1,19 @@
 import { connect } from 'react-redux';
+import {
+  addCard,
+  deleteCard
+} from './services/actions.js';
 import _Bank from './Bank';
 
-// Actions
-import { addCard } from './actions';
 
-// Get all cards from state
 const mapStateToProps = (state) => {
   return { cards: state.Bank.cards };
 };
 
-// Add a src to cards
-const mapDispatchToProps = (dispatch, src) => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    addCard: (src) => { dispatch(addCard(src)); }
+    addCard: (src) => { dispatch(addCard(src)); },
+    deleteCard: (id) => { dispatch(deleteCard(id)); }
   };
 };
 

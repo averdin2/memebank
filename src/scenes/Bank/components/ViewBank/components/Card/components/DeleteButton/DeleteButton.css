@@ -1,0 +1,10 @@
+.DeleteButton {
+  margin: 5px;
+  position: absolute;
+  color: #F5B7B1;
+  border: solid 0.1em;
+}
+
+.DeleteButton:hover {
+  filter: brightness(110%);
+}
