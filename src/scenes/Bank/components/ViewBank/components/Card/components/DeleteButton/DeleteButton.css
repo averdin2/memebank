@@ -9,3 +9,7 @@
 .DeleteButton:hover {
   filter: brightness(110%);
 }
+
+.DeleteButton:active {
+  filter: brightness(90%);
+}
