@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
 import {
-  GET_CARD_DATA_RECIEVED,
-  ADD_CARD_SUCCESS
+  ADD_CARD_SUCCESS,
+  DELETE_CARD_SUCCESS,
+  GET_CARD_DATA_RECIEVED
 } from './actionTypes.js';
 
 /* Reducers */
@@ -9,11 +10,21 @@ import {
 const cards = (state = [], action) => {
   switch (action.type) {
 
-  case GET_CARD_DATA_RECIEVED:
-    return action.cards;
-
   case ADD_CARD_SUCCESS:
     return [...state, { src: action.src }];
+
+  case DELETE_CARD_SUCCESS: {
+    let nextState = [];
+    for (const card in state) {
+      if (state[card].id !== action.id) {
+        nextState.push(state[card]);
+      }
+    }
+    return nextState;
+  }
+
+  case GET_CARD_DATA_RECIEVED:
+    return action.cards;
 
   default:
     return state;

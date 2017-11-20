@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+// Nested Components
+import DeleteButton from './components/DeleteButton/DeleteButton';
+
 // Styles
 import './Card.css';
 
@@ -9,6 +12,11 @@ export default class Card extends Component {
   openSrc = () => {
     window.open(this.props.src);
   }
+
+  deleteCard = () => {
+    this.props.deleteCard(this.props.id);
+  }
+
 
   // // Text Cards
   // textCard = (props) => {
@@ -31,11 +39,12 @@ export default class Card extends Component {
   // }
 
   // Image Cards
-  imageCard = (props) => {
-    const imageCardProps = {
-      ...props,
+  imageCard = () => {
+    const imageProps = {
+      onClick: this.openSrc,
+      src: this.props.src,
     };
-    return <img className='Card' alt='' {...imageCardProps} />;
+    return <img alt='' {...imageProps} />;
   }
 
   render () {
@@ -43,9 +52,15 @@ export default class Card extends Component {
     // Properties of img component
     const cardProps = {
       ...this.props,
-      onClick: this.openSrc,
     };
 
-    return this.imageCard(cardProps);
+    const buttonProps = {
+      onClick: this.deleteCard,
+    };
+
+    const image = this.imageCard(this.props);
+    const button = <DeleteButton {...buttonProps} />;
+
+    return <div className='Card' {...cardProps}>{button}{image}</div>;
   }
 }

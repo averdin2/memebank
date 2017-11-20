@@ -3,13 +3,15 @@ import request from 'superagent';
 // Action Types
 import {
   GET_CARD_DATA,
-  ADD_CARD
+  ADD_CARD,
+  DELETE_CARD
 } from './actionTypes.js';
 
 // Actions
 import {
   getCardDataRecieved,
   addCardSuccess,
+  deleteCardSuccess
 } from './actions.js';
 
 const api = 'http://localhost:8000/banks/1/cards';
@@ -69,6 +71,22 @@ const bankMiddleware = store => next => action => {
             /* eslint-enable */
             next(addCardSuccess(action.src));
           });
+      });
+    break;
+
+  case DELETE_CARD:
+    request.del(api + `/${action.id}`)
+      .end((err, res) => {
+        if (err) {
+          /* eslint-disable */
+          console.log('DELETE_CARD fail');
+          /* eslint-enable */
+          return next(deleteCardSuccess(action.id));
+        }
+        /* eslint-disable */
+        console.log('DELETE_CARD success');
+        /* eslint-enable */
+        next(deleteCardSuccess(action.id));
       });
     break;
 

@@ -14,11 +14,16 @@ export default class _Bank extends Component {
     this.props.addCard(src);
   }
 
+  deleteCard = (id) => {
+    this.props.deleteCard(id);
+  }
+
   render () {
 
     // Properties of ViewBank component
     const viewProps = {
       cards: this.props.cards,
+      deleteCard: this.deleteCard,
     };
 
     // Propertied of InputBank component

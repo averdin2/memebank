@@ -6,14 +6,24 @@ import Card from './components/Card/Card';
 
 export default class ViewBank extends Component {
 
-  // Create a Card component with input as src
-  stuffCard = (props) => {
-    return <Card key={props.id} {...props} />;
-  }
-
   // Update layout
   updateLayout = () => {
     this.grid.updateLayout();
+  }
+
+  // Delete card from bank
+  deleteCard = (id) => {
+    this.props.deleteCard(id);
+  }
+
+  // Create a Card component with input as src
+  stuffCard = (props) => {
+    const cardProps = {
+      ...props,
+      key: props.id,
+      deleteCard: this.deleteCard,
+    };
+    return <Card {...cardProps} />;
   }
 
   render () {
