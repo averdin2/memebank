@@ -27,6 +27,7 @@ export default class Card extends Component {
     this.setState({ hover: true });
   }
 
+  // Hide button on not hover
   hideButtons = () => {
     this.setState({ hover: false });
   }
@@ -42,13 +43,14 @@ export default class Card extends Component {
 
   render () {
 
-    // Properties of img component
+    // Properties of card component
     const cardProps = {
       ...this.props,
       onMouseEnter: this.showButtons,
       onMouseLeave: this.hideButtons,
     };
 
+    // Properties of delete button
     const buttonProps = {
       onClick: this.deleteCard,
     };

@@ -54,7 +54,8 @@ export default class ViewBank extends Component {
       duration: 1000,
 
       // Layout updating :: this is a hack and needs to be changed to something else
-      onMouseMove: this.updateLayout,
+      onMouseEnter: this.updateLayout,
+      onMouseLeave: this.updateLayout,
     };
 
     const grid = <StackGrid {...gridProps} >{cards}</StackGrid>;
