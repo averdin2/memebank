@@ -62,14 +62,12 @@ const bankMiddleware = store => next => action => {
               /* eslint-disable */
               console.log('ADD_CARD fail');
               /* eslint-enable */
-
-              // Change this
-              return next(addCardSuccess(action.src));
+              return;
             }
             /* eslint-disable */
             console.log('ADD_CARD success');
             /* eslint-enable */
-            next(addCardSuccess(action.src));
+            next(addCardSuccess(res.body));
           });
       });
     break;
@@ -81,7 +79,7 @@ const bankMiddleware = store => next => action => {
           /* eslint-disable */
           console.log('DELETE_CARD fail');
           /* eslint-enable */
-          return next(deleteCardSuccess(action.id));
+          return;
         }
         /* eslint-disable */
         console.log('DELETE_CARD success');

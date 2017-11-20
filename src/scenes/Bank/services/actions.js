@@ -16,10 +16,10 @@ export const addCard = (src) => {
   };
 };
 
-export const addCardSuccess = (src) => {
+export const addCardSuccess = (card) => {
   return {
     type: ADD_CARD_SUCCESS,
-    src: src,
+    card: card,
   };
 };
 

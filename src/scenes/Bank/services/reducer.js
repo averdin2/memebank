@@ -11,7 +11,7 @@ const cards = (state = [], action) => {
   switch (action.type) {
 
   case ADD_CARD_SUCCESS:
-    return [...state, { src: action.src }];
+    return [...state, action.card];
 
   case DELETE_CARD_SUCCESS: {
     let nextState = [];
