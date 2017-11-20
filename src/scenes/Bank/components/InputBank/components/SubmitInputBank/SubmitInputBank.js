@@ -5,7 +5,6 @@ import './SubmitInputBank.css';
 export default class SubmitInputBank extends Component {
   render () {
     const icon = <MdSend {...this.props} />;
-    const button = <input type='button' />;
     return <div className='SubmitInputBank'>{icon}</div>;
   }
 }
