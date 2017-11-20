@@ -1,8 +1,9 @@
 .DeleteButton {
-  margin: 5px;
+  margin: 0.3em;
+  height: 1.5em;
+  width: 1.5em;
   position: absolute;
   color: #F5B7B1;
-  border: solid 0.1em;
 }
 
 .DeleteButton:hover {
