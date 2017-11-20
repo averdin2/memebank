@@ -7,36 +7,29 @@ import DeleteButton from './components/DeleteButton/DeleteButton';
 import './Card.css';
 
 export default class Card extends Component {
+  constructor (props) {
+    super(props);
+    this.state = { hover: false };
+  }
 
   // Open the image in a new tab
   openSrc = () => {
     window.open(this.props.src);
   }
 
+  // Delete card from bank
   deleteCard = () => {
     this.props.deleteCard(this.props.id);
   }
 
+  // Show button on hover
+  showButtons = () => {
+    this.setState({ hover: true });
+  }
 
-  // // Text Cards
-  // textCard = (props) => {
-  //   const textCardProps = {
-  //     ...props,
-  //   };
-  //   return <span className='Card' {...textCardProps}>Hello</span>;
-  // }
-
-  // // Video Cards
-  // videoCard = (props) => {
-  //   const videoCardProps = {
-  //     ...props,
-  //     frameBorder: '0',
-  //     scrolling: 'no',
-  //     height: '250px',
-  //     allowFullScreen: true,
-  //   };
-  //   return <iframe className='Card' title='title' {...videoCardProps}></iframe>;
-  // }
+  hideButtons = () => {
+    this.setState({ hover: false });
+  }
 
   // Image Cards
   imageCard = () => {
@@ -52,6 +45,8 @@ export default class Card extends Component {
     // Properties of img component
     const cardProps = {
       ...this.props,
+      onMouseEnter: this.showButtons,
+      onMouseLeave: this.hideButtons,
     };
 
     const buttonProps = {
@@ -59,7 +54,7 @@ export default class Card extends Component {
     };
 
     const image = this.imageCard(this.props);
-    const button = <DeleteButton {...buttonProps} />;
+    const button = this.state.hover ? <DeleteButton {...buttonProps} /> : null;
 
     return <div className='Card' {...cardProps}>{button}{image}</div>;
   }
