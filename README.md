@@ -9,4 +9,12 @@
   npm start
  ```
 
+ #### Build
+ Build optimized application in `/build` folder for production
+ ```
+  npm run build
+  npm install -g serve
+  serve -s build
+ ```
+
 [CORS problems?](https://goo.gl/oQNhwh)
