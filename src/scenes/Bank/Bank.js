@@ -14,6 +14,7 @@ export default class _Bank extends Component {
     this.props.addCard(src);
   }
 
+  // Delete card from bank
   deleteCard = (id) => {
     this.props.deleteCard(id);
   }
@@ -31,9 +32,17 @@ export default class _Bank extends Component {
       addCard: this.addCard,
     };
 
+    const style = (
+      <style>{`
+        body {
+          background-color: #CCCCFF;
+        }
+      `}</style>
+    );
+
     const view = <ViewBank {...viewProps} />;
     const input = <InputBank {...inputProps} />;
 
-    return <div className='Bank'>{view}{input}</div>;
+    return <div className='Bank'>{style}{view}{input}</div>;
   }
 }
