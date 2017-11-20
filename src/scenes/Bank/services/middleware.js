@@ -14,7 +14,7 @@ import {
   deleteCardSuccess
 } from './actions.js';
 
-const api = 'http://localhost:8000/banks/1/cards';
+const api = 'https://api.memebank.life/banks/1/cards';
 const validTypes = ['image/jpeg', 'image/png', 'image/gif'];
 
 const bankMiddleware = store => next => action => {
