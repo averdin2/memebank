@@ -8,3 +8,5 @@
   npm install
   npm start
  ```
+
+[CORS problems?](https://goo.gl/oQNhwh)
