@@ -1,7 +1,8 @@
 import { connect } from 'react-redux';
 import {
   addCard,
-  deleteCard
+  deleteCard,
+  getCardData
 } from './services/actions.js';
 import _Bank from './Bank';
 
@@ -13,7 +14,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     addCard: (src) => { dispatch(addCard(src)); },
-    deleteCard: (id) => { dispatch(deleteCard(id)); }
+    deleteCard: (id) => { dispatch(deleteCard(id)); },
+    getCardData: () => { dispatch(getCardData()); },
   };
 };
 
