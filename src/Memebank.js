@@ -19,14 +19,14 @@ import Login from './scenes/Login/Login';
 import Join from './scenes/Join/Join';
 import Bank from './scenes/Bank/container.js';
 
+// Styles
+import './style.css';
+
 // Reducers
 import Root from './reducer.js';
 
 // Middleware
 import bankMiddleware from './scenes/Bank/services/middleware.js';
-
-// Styles
-import './style.css';
 
 // Create store for application state
 const store = createStore(Root, applyMiddleware(bankMiddleware));
@@ -47,6 +47,3 @@ export default class Memebank extends Component {
     return <Provider store={store}><div className='Memebank'>{router}</div></Provider>;
   }
 }
-
-// Initialize
-store.dispatch({ type: 'GET_CARD_DATA' });
