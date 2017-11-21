@@ -8,6 +8,9 @@ import InputBank from './components/InputBank/InputBank';
 import './Bank.css';
 
 export default class _Bank extends Component {
+  componentWillMount () {
+    this.props.getCardData();
+  }
 
   // Add card to bank
   addCard = (src) => {
