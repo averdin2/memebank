@@ -14,13 +14,7 @@ const cards = (state = [], action) => {
     return [...state, action.card];
 
   case DELETE_CARD_SUCCESS: {
-    let nextState = [];
-    for (const card in state) {
-      if (state[card].id !== action.id) {
-        nextState.push(state[card]);
-      }
-    }
-    return nextState;
+    return state.filter(card => card.id !== action.id);
   }
 
   case GET_CARD_DATA_RECIEVED:

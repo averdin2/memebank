@@ -51,7 +51,7 @@ export default class ViewBank extends Component {
       gutterHeight: 10,
 
       // Animation
-      duration: 1000,
+      duration: 500,
 
       // Layout updating :: this is a hack and needs to be changed to something else
       onMouseEnter: this.updateLayout,
