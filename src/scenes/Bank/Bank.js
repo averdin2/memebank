@@ -15,11 +15,13 @@ export default class _Bank extends Component {
   // Add card to bank
   addCard = (src) => {
     this.props.addCard(src);
+    this.props.getCardData();
   }
 
   // Delete card from bank
   deleteCard = (id) => {
     this.props.deleteCard(id);
+    this.props.getCardData();
   }
 
   render () {

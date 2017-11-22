@@ -14,7 +14,7 @@ import {
   deleteCardSuccess
 } from './actions.js';
 
-const api = 'https://api.memebank.life/banks/1/cards';
+const api = 'https://api.memebank.life/';
 const validTypes = ['image/jpeg', 'image/png', 'image/gif'];
 
 const bankMiddleware = store => next => action => {
@@ -23,7 +23,7 @@ const bankMiddleware = store => next => action => {
   switch (action.type) {
 
   case GET_CARD_DATA:
-    request.get(api)
+    request.get(api + 'banks/1/cards')
       .end((err, res) => {
         if (err) {
           /* eslint-disable */
@@ -73,7 +73,7 @@ const bankMiddleware = store => next => action => {
     break;
 
   case DELETE_CARD:
-    request.del(api + `/${action.id}`)
+    request.del(api + `cards/${action.id}`)
       .end((err, res) => {
         if (err) {
           /* eslint-disable */
