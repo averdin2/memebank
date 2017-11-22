@@ -55,7 +55,7 @@ const bankMiddleware = store => next => action => {
 
         // ADD_CARD
         /* Middleware actions don't chain */
-        request.post(api)
+        request.post(api + 'banks/1/cards')
           .send({ card: { src: action.src } })
           .end((err, res) => {
             if (err) {
