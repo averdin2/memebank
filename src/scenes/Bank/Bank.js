@@ -12,30 +12,7 @@ export default class _Bank extends Component {
     this.props.getCardData();
   }
 
-  // Add card to bank
-  addCard = (src) => {
-    this.props.addCard(src);
-    this.props.getCardData();
-  }
-
-  // Delete card from bank
-  deleteCard = (id) => {
-    this.props.deleteCard(id);
-    this.props.getCardData();
-  }
-
   render () {
-
-    // Properties of ViewBank component
-    const viewProps = {
-      cards: this.props.cards,
-      deleteCard: this.deleteCard,
-    };
-
-    // Propertied of InputBank component
-    const inputProps = {
-      addCard: this.addCard,
-    };
 
     const style = (
       <style>{`
@@ -44,6 +21,15 @@ export default class _Bank extends Component {
         }
       `}</style>
     );
+
+    const viewProps = {
+      cards: this.props.cards,
+      deleteCard: this.props.deleteCard,
+    };
+
+    const inputProps = {
+      addCard: this.props.addCard,
+    };
 
     const view = <ViewBank {...viewProps} />;
     const input = <InputBank {...inputProps} />;

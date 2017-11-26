@@ -7,8 +7,6 @@ import {
   GET_CARD_DATA_RECIEVED
 } from './actionTypes.js';
 
-/* Actions */
-
 export const addCard = (src) => {
   return {
     type: ADD_CARD,

@@ -5,17 +5,14 @@ import {
   GET_CARD_DATA_RECIEVED
 } from './actionTypes.js';
 
-/* Reducers */
-
 const cards = (state = [], action) => {
   switch (action.type) {
 
   case ADD_CARD_SUCCESS:
     return [...state, action.card];
 
-  case DELETE_CARD_SUCCESS: {
+  case DELETE_CARD_SUCCESS:
     return state.filter(card => card.id !== action.id);
-  }
 
   case GET_CARD_DATA_RECIEVED:
     return action.cards;

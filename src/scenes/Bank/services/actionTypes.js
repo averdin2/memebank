@@ -1,4 +1,3 @@
-/* Action Types */
 export const ADD_CARD = 'ADD_CARD';
 export const ADD_CARD_SUCCESS = 'ADD_CARD_SUCCESS';
 

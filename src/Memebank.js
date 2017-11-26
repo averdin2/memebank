@@ -28,13 +28,12 @@ import Root from './reducer.js';
 // Middleware
 import bankMiddleware from './scenes/Bank/services/middleware.js';
 
-// Create store for application state
+
 const store = createStore(Root, applyMiddleware(bankMiddleware));
 
 export default class Memebank extends Component {
   render () {
 
-    // Routing
     const routes = (
       <Switch>
         <Route exact path='/' component={Bank} />
@@ -42,6 +41,7 @@ export default class Memebank extends Component {
         <Route path='/join' component={Join} />
       </Switch>
     );
+    
     const router = <BrowserRouter>{routes}</BrowserRouter>;
 
     return <Provider store={store}><div className='Memebank'>{router}</div></Provider>;

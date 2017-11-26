@@ -7,7 +7,6 @@ import {
   DELETE_CARD
 } from './actionTypes.js';
 
-// Actions
 import {
   getCardDataRecieved,
   addCardSuccess,

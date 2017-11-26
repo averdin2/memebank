@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 // Nested Components
 import Trash from 'react-icons/lib/fa/trash';
 
-// Styles
+// Style
 import './DeleteButton.css';
 
 export default class DeleteButton extends Component {

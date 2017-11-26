@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 // Nested Components
 import DeleteButton from './components/DeleteButton/DeleteButton';
 
-// Styles
+// Style
 import './Card.css';
 
 export default class Card extends Component {
@@ -12,27 +12,22 @@ export default class Card extends Component {
     this.state = { hover: false };
   }
 
-  // Open the image in a new tab
   openSrc = () => {
     window.open(this.props.src);
   }
 
-  // Delete card from bank
   deleteCard = () => {
     this.props.deleteCard(this.props.id);
   }
 
-  // Show button on hover
   showButtons = () => {
     this.setState({ hover: true });
   }
 
-  // Hide button on not hover
   hideButtons = () => {
     this.setState({ hover: false });
   }
 
-  // Image Cards
   imageCard = () => {
     const imageProps = {
       onClick: this.openSrc,
@@ -43,14 +38,12 @@ export default class Card extends Component {
 
   render () {
 
-    // Properties of card component
     const cardProps = {
       ...this.props,
       onMouseEnter: this.showButtons,
       onMouseLeave: this.hideButtons,
     };
 
-    // Properties of delete button
     const buttonProps = {
       onClick: this.deleteCard,
     };
