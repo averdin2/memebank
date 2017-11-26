@@ -5,6 +5,9 @@ import StackGrid from 'react-stack-grid';
 import Card from './components/Card/Card';
 
 export default class ViewBank extends Component {
+  componentWillMount () {
+    this.props.getCardData();
+  }
 
   updateLayout = () => {
     this.grid.updateLayout();

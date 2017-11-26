@@ -8,10 +8,6 @@ import InputBank from './components/InputBank/InputBank';
 import './Bank.css';
 
 export default class _Bank extends Component {
-  componentWillMount () {
-    this.props.getCardData();
-  }
-
   render () {
 
     const style = (
@@ -25,6 +21,7 @@ export default class _Bank extends Component {
     const viewProps = {
       cards: this.props.cards,
       deleteCard: this.props.deleteCard,
+      getCardData: this.props.getCardData,
     };
 
     const inputProps = {
