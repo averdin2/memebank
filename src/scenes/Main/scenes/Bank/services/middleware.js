@@ -1,13 +1,13 @@
 import request from 'superagent';
 
 import {
-  GET_CARD_DATA,
+  GET_CARDS,
   ADD_CARD,
   DELETE_CARD
 } from './actionTypes.js';
 
 import {
-  getCardDataRecieved,
+  getCardsSuccess,
   addCardSuccess,
   deleteCardSuccess
 } from './actions.js';
@@ -15,13 +15,13 @@ import {
 const api = 'https://api.memebank.life/';
 const validTypes = ['image/jpeg', 'image/png', 'image/gif'];
 
-const bankMiddleware = store => next => action => {
+const cardMiddleware = store => next => action => {
   next(action);
 
   switch (action.type) {
 
-  case GET_CARD_DATA:
-    request.get(api + 'banks/2/cards')
+  case GET_CARDS:
+    request.get(api + `banks/${action.bank}/cards`)
       .end((err, res) => {
         if (err) {
           /* eslint-disable */
@@ -32,7 +32,7 @@ const bankMiddleware = store => next => action => {
         /* eslint-disable */
         console.log('GET_CARD_DATA success');
         /* eslint-enable */
-        next(getCardDataRecieved(res.body));
+        next(getCardsSuccess(res.body));
       });
     break;
 
@@ -53,8 +53,9 @@ const bankMiddleware = store => next => action => {
 
         // ADD_CARD
         /* Middleware actions don't chain */
-        request.post(api + 'banks/1/cards')
+        request.post(api + `banks/${action.bank}/cards`)
           .send({ card: { src: action.src } })
+          .set('Authorization', `Bearer ${action.token}`)
           .end((err, res) => {
             if (err) {
               /* eslint-disable */
@@ -72,6 +73,7 @@ const bankMiddleware = store => next => action => {
 
   case DELETE_CARD:
     request.del(api + `cards/${action.id}`)
+      .set('Authorization', `Bearer ${action.token}`)
       .end((err, res) => {
         if (err) {
           /* eslint-disable */
@@ -91,4 +93,4 @@ const bankMiddleware = store => next => action => {
   }
 };
 
-export default bankMiddleware;
+export default cardMiddleware;

@@ -3,14 +3,16 @@ import {
   ADD_CARD_SUCCESS,
   DELETE_CARD,
   DELETE_CARD_SUCCESS,
-  GET_CARD_DATA,
-  GET_CARD_DATA_RECIEVED
+  GET_CARDS,
+  GET_CARDS_SUCCESS
 } from './actionTypes.js';
 
-export const addCard = (src) => {
+export const addCard = (src, bank, token) => {
   return {
     type: ADD_CARD,
     src: src,
+    bank: bank,
+    token: token,
   };
 };
 
@@ -21,10 +23,12 @@ export const addCardSuccess = (card) => {
   };
 };
 
-export const deleteCard = (id) => {
+export const deleteCard = (id, bank, token) => {
   return {
     type: DELETE_CARD,
     id: id,
+    bank: bank,
+    token: token,
   };
 };
 
@@ -35,15 +39,16 @@ export const deleteCardSuccess = (id) => {
   };
 };
 
-export const getCardData = () => {
+export const getCards = (bank) => {
   return {
-    type: GET_CARD_DATA,
+    type: GET_CARDS,
+    bank: bank
   };
 };
 
-export const getCardDataRecieved = (cards) => {
+export const getCardsSuccess = (cards) => {
   return {
-    type: GET_CARD_DATA_RECIEVED,
+    type: GET_CARDS_SUCCESS,
     cards: cards,
   };
 };

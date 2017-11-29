@@ -10,20 +10,17 @@ import {
 // Scenes
 import Login from './scenes/Login/container.js';
 import Join from './scenes/Join/container.js';
-import Bank from './scenes/Bank/container.js';
+import Main from './scenes/Main/container.js';
 
 // Styles
 import './style.css';
 
-
-
 export default class _Memebank extends Component {
   render () {
-    console.log(this.props.token);
 
     const routes = (
       <Switch>
-        { this.props.token ? <Route exact path='/' component={Bank} /> : <Route path='/' component={Login} /> }
+        { this.props.token ? <Route exact path='/' component={Main} /> : <Route path='/' component={Login} /> }
         <Route path='/join' component={Join} />
       </Switch>
     );

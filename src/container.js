@@ -4,7 +4,7 @@ import _Memebank from './Memebank.js';
 
 const mapStateToProps = (state) => {
   return {
-    token: state.User.token,
+    token: state.token,
   };
 };
 

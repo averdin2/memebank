@@ -1,4 +1,3 @@
-import { combineReducers } from 'redux';
 import { LOGIN_USER_SUCCESS } from './actionTypes.js';
 
 const token = (state = null, action) => {
@@ -12,8 +11,4 @@ const token = (state = null, action) => {
   }
 };
 
-const User = combineReducers({
-  token
-});
-
-export default User;
+export default token;

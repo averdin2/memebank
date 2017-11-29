@@ -4,22 +4,22 @@ import _Bank from './Bank';
 import {
   addCard,
   deleteCard,
-  getCardData
+  getCards
 } from './services/actions.js';
 
 
 const mapStateToProps = (state) => {
   return {
-    cards: state.Bank.cards,
-    token: state.User.token,
+    cards: state.cards,
+    token: state.token,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    addCard: (src) => { dispatch(addCard(src)); },
-    deleteCard: (id) => { dispatch(deleteCard(id)); },
-    getCardData: () => { dispatch(getCardData()); },
+    addCard: (src, bank, token) => { dispatch(addCard(src, bank, token)); },
+    deleteCard: (id, bank, token) => { dispatch(deleteCard(id, bank, token)); },
+    getCardData: (token) => { dispatch(getCards(token)); },
   };
 };
 

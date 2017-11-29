@@ -1,8 +1,7 @@
-import { combineReducers } from 'redux';
 import {
   ADD_CARD_SUCCESS,
   DELETE_CARD_SUCCESS,
-  GET_CARD_DATA_RECIEVED
+  GET_CARDS_SUCCESS
 } from './actionTypes.js';
 
 const cards = (state = [], action) => {
@@ -14,7 +13,7 @@ const cards = (state = [], action) => {
   case DELETE_CARD_SUCCESS:
     return state.filter(card => card.id !== action.id);
 
-  case GET_CARD_DATA_RECIEVED:
+  case GET_CARDS_SUCCESS:
     return action.cards;
 
   default:
@@ -22,8 +21,4 @@ const cards = (state = [], action) => {
   }
 };
 
-const Bank = combineReducers({
-  cards
-});
-
-export default Bank;
+export default cards;
