@@ -16,9 +16,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
+
   "devDependencies": {
     "babel-eslint": "^8.0.2",
     "eslint": "^4.10.0",
