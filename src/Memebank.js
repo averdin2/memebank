@@ -20,7 +20,7 @@ export default class _Memebank extends Component {
 
     const routes = (
       <Switch>
-        { this.props.token ? <Route exact path='/' component={Main} /> : <Route path='/' component={Login} /> }
+        { this.props.token ? <Route exact path='/' component={Main} /> : <Route exact path='/' component={Login} /> }
         <Route path='/join' component={Join} />
       </Switch>
     );

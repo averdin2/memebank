@@ -26,7 +26,6 @@ const accountMiddleware = store => next => action => {
         }
         /* eslint-disable */
         console.log('CREATE_USER success');
-        console.log(res);
         /* eslint-enable */
         return;
       });
