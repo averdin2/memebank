@@ -2,8 +2,15 @@
 
 ## 10.1 Unit Test Plan
 - 10.1.1 Unit Test Descriptions
-  - 10.1.1.1 Unit Test 1 - Add User Test-- This test will make sure that a user can successfully create a new profile.
+  - 10.1.1.1 Unit Test 1 - Add User Test-- This test will make sure that a user can successfully create a new profile and make sure it is in the user database.
   - 10.1.1.2 Unit Test 2 - User Login Test -- This test will make sure an existing user can successfully sign into their memebank.
+  - 10.1.1.3 Unit Test 3 - Create Bank Test -- Test to make sure the user can create multiple banks.
+  - 10.1.1.4 Unit Test 4 - Add Users to Bank Test -- Make sure when creating a bank it allows the user to add other users to their bank.
+  - 10.1.1.5 Unit Test 5 - Add Meme Test -- This test will make sure the user can add their meme to their bank and view it properly.
+  - 10.1.1.6 Unit Test 6 - Add Tags Test -- Make sure that memes have the specified tags when given said values.
+  - 10.1.1.7 Unit Test 7 - Tag System Test -- This test will make sure when clicking a tag it will show the tags
+  - 10.1.1.8 Unit Test 8 - Meme Database Test -- When adding an meme to a users bank it will make sure that the meme is in a database.
+  - 10.1.1.9 Unit Test 9 - Delete Meme Test - This test will make sure that when a user delete it updates properly and gets rid of the meme from view, database, and the tags are removed as well if it is the only photo in that tag. 
 
 
 ## 10.2 Integration Test Plan
