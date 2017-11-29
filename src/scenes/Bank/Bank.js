@@ -9,6 +9,7 @@ import './Bank.css';
 
 export default class _Bank extends Component {
   render () {
+    console.log(this.props.token);
 
     const style = (
       <style>{`

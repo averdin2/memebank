@@ -8,29 +8,110 @@ import FormButton from '../../components/FormButton/FormButton';
 // Style
 import './Join.css';
 
-export default class Join extends Component {
+export default class _Join extends Component {
+  constructor (props) {
+    super(props);
+    this.state = {
+      email: '',
+      username: '',
+      password: '',
+      passwordConfirmation: ''
+    };
+  }
 
   backButton () {
     window.location.href = '/';
   }
 
+  handleEmailChange = (e) => {
+    this.setState({ email: e.target.value });
+  }
+
+  handleUsernameChange = (e) => {
+    this.setState({ username: e.target.value });
+  }
+
+  handlePasswordChange = (e) => {
+    this.setState({ password: e.target.value });
+  }
+
+  handlePasswordConfirmationChange = (e) => {
+    this.setState({ passwordConfirmation: e.target.value });
+  }
+
+  handleSubmit = () => {
+    if (this.state.password === this.state.passwordConfirmation) {
+      this.props.createUser(this.state.email, this.state.username, this.state.password);
+      this.setState({ email: '', username: '', password: '', passwordConfirmation: '' });
+    }
+  }
+
+  handleKeySubmit = (event) => {
+    if (event.key === 'Enter') {
+      this.handleSubmit();
+    }
+  }
+
   render () {
 
+    const emailFieldProps = {
+      onChange: this.handleEmailChange,
+      onKeyPress: this.handleKeySubmit,
+      value: this.state.email,
+      placeholder: 'Email',
+    };
+
+    const usernameFieldProps = {
+      onChange: this.handleUsernameChange,
+      onKeyPress: this.handleKeySubmit,
+      value: this.state.username,
+      placeholder: 'Username',
+    };
+
+    const passwordFieldProps = {
+      onChange: this.handlePasswordChange,
+      onKeyPress: this.handleKeySubmit,
+      value: this.state.password,
+      placeholder: 'Password',
+      type: 'password',
+    };
+
+    const passwordConfirmationFieldProps = {
+      onChange: this.handlePasswordConfirmationChange,
+      onKeyPress: this.handleKeySubmit,
+      value: this.state.passwordConfirmation,
+      placeholder: 'Confirm Password',
+      type: 'password',
+    };
+
     const fields = [
-      <FormField key='1' placeholder={'Email'} />,
-      <FormField key='2' placeholder={'Username'} />,
-      <FormField key='3' placeholder={'Password'} type='password' />,
-      <FormField key='4' placeholder={'Confirm Password'} type='password' />,
+      <FormField key='1' {...emailFieldProps} />,
+      <FormField key='2' {...usernameFieldProps} />,
+      <FormField key='3' {...passwordFieldProps} />,
+      <FormField key='4' {...passwordConfirmationFieldProps} />,
     ];
 
+    const backButtonProps = {
+      id: 'join_button_1',
+      color: '#7cc6fe',
+      value: 'Back',
+      onClick: this.backButton,
+    };
+
+    const joinButtonProps = {
+      id: 'join_button_2',
+      color: '#ffccff',
+      value: 'Join',
+      onClick: this.handleSubmit,
+    };
+
     const buttons = [
-      <FormButton key='1' id='join_button_1' color='#7cc6fe' value='Back' onClick={this.backButton} />,
-      <FormButton key='2' id='join_button_2' color='#ffccff' value='Join' type='submit' />,
+      <FormButton key='1' {...backButtonProps} />,
+      <FormButton key='2' {...joinButtonProps} />,
     ];
 
     const title = <Title/>;
-    const form = <form>{fields}{buttons}</form>;
 
-    return <div className='Join'>{title}{form}</div>;
+    return <div className='Join'>{title}{fields}{buttons}</div>;
   }
 }

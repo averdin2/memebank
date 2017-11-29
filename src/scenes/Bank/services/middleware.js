@@ -1,6 +1,5 @@
 import request from 'superagent';
 
-// Action Types
 import {
   GET_CARD_DATA,
   ADD_CARD,
@@ -22,7 +21,7 @@ const bankMiddleware = store => next => action => {
   switch (action.type) {
 
   case GET_CARD_DATA:
-    request.get(api + 'banks/1/cards')
+    request.get(api + 'banks/2/cards')
       .end((err, res) => {
         if (err) {
           /* eslint-disable */

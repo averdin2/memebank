@@ -9,7 +9,10 @@ import {
 
 
 const mapStateToProps = (state) => {
-  return { cards: state.Bank.cards };
+  return {
+    cards: state.Bank.cards,
+    token: state.User.token,
+  };
 };
 
 const mapDispatchToProps = (dispatch) => {

@@ -26,6 +26,4 @@ const Bank = combineReducers({
   cards
 });
 
-
-
 export default Bank;

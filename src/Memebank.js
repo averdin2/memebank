@@ -15,8 +15,8 @@ import {
 } from 'react-router-dom';
 
 // Scenes
-import Login from './scenes/Login/Login';
-import Join from './scenes/Join/Join';
+import Login from './scenes/Login/container.js';
+import Join from './scenes/Join/container.js';
 import Bank from './scenes/Bank/container.js';
 
 // Styles
@@ -27,9 +27,10 @@ import Root from './reducer.js';
 
 // Middleware
 import bankMiddleware from './scenes/Bank/services/middleware.js';
+import accountMiddleware from './services/middleware.js';
 
 
-const store = createStore(Root, applyMiddleware(bankMiddleware));
+const store = createStore(Root, applyMiddleware(accountMiddleware, bankMiddleware));
 
 export default class Memebank extends Component {
   render () {
@@ -41,7 +42,7 @@ export default class Memebank extends Component {
         <Route path='/join' component={Join} />
       </Switch>
     );
-    
+
     const router = <BrowserRouter>{routes}</BrowserRouter>;
 
     return <Provider store={store}><div className='Memebank'>{router}</div></Provider>;
