@@ -1,12 +1,5 @@
 import React, { Component } from 'react';
 
-// Redux
-import { Provider } from 'react-redux';
-import {
-  createStore,
-  applyMiddleware
-} from 'redux';
-
 // React-Router
 import {
   BrowserRouter,
@@ -22,29 +15,21 @@ import Bank from './scenes/Bank/container.js';
 // Styles
 import './style.css';
 
-// Reducers
-import Root from './reducer.js';
-
-// Middleware
-import bankMiddleware from './scenes/Bank/services/middleware.js';
-import accountMiddleware from './services/middleware.js';
 
 
-const store = createStore(Root, applyMiddleware(accountMiddleware, bankMiddleware));
-
-export default class Memebank extends Component {
+export default class _Memebank extends Component {
   render () {
+    console.log(this.props.token);
 
     const routes = (
       <Switch>
-        <Route exact path='/' component={Bank} />
-        <Route path='/login' component={Login} />
+        { this.props.token ? <Route exact path='/' component={Bank} /> : <Route path='/' component={Login} /> }
         <Route path='/join' component={Join} />
       </Switch>
     );
 
     const router = <BrowserRouter>{routes}</BrowserRouter>;
 
-    return <Provider store={store}><div className='Memebank'>{router}</div></Provider>;
+    return <div className='Memebank'>{router}</div>;
   }
 }

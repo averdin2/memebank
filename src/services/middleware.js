@@ -33,7 +33,6 @@ const accountMiddleware = store => next => action => {
     break;
 
   case LOGIN_USER:
-    console.log(action);
     request.post(api + 'user_token')
       .send({ auth: { email: action.email, password: action.password } })
       .end((err, res) => {
