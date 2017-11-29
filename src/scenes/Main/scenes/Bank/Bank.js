@@ -19,12 +19,16 @@ export default class _Bank extends Component {
     );
 
     const viewProps = {
+      active: this.props.banks[0].id,
+      token: this.props.token,
       cards: this.props.cards,
       deleteCard: this.props.deleteCard,
-      getCardData: this.props.getCardData,
+      getCards: this.props.getCards,
     };
 
     const inputProps = {
+      active: this.props.banks[0].id,
+      token: this.props.token,
       addCard: this.props.addCard,
     };
 

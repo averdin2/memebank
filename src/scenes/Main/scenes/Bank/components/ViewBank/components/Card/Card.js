@@ -17,7 +17,7 @@ export default class Card extends Component {
   }
 
   deleteCard = () => {
-    this.props.deleteCard(this.props.id);
+    this.props.deleteCard(this.props.id, this.props.active, this.props.token);
   }
 
   showButtons = () => {

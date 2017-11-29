@@ -18,7 +18,7 @@ export default class InputBank extends Component {
   }
 
   handleSubmit = () => {
-    this.props.addCard(this.state.input);
+    this.props.addCard(this.state.input, this.props.active, this.props.token);
     this.setState({ input: '' });
   }
 

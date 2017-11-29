@@ -6,7 +6,7 @@ import Card from './components/Card/Card';
 
 export default class ViewBank extends Component {
   componentWillMount () {
-    this.props.getCardData();
+    this.props.getCards(this.props.active);
   }
 
   updateLayout = () => {
@@ -17,6 +17,8 @@ export default class ViewBank extends Component {
     const cardProps = {
       ...props,
       key: props.id,
+      active: this.props.active,
+      token: this.props.token,
       deleteCard: this.props.deleteCard,
     };
     return <Card {...cardProps} />;

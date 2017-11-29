@@ -4,7 +4,7 @@ import {
   GET_BANKS_SUCCESS
 } from './actionTypes.js';
 
-const banks = (state = [], action) => {
+const banks = (state = null, action) => {
   switch (action.type) {
 
   case GET_BANKS_SUCCESS:

@@ -12,6 +12,7 @@ const mapStateToProps = (state) => {
   return {
     cards: state.cards,
     token: state.token,
+    banks: state.Bank.banks
   };
 };
 
@@ -19,7 +20,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     addCard: (src, bank, token) => { dispatch(addCard(src, bank, token)); },
     deleteCard: (id, bank, token) => { dispatch(deleteCard(id, bank, token)); },
-    getCardData: (token) => { dispatch(getCards(token)); },
+    getCards: (token) => { dispatch(getCards(token)); },
   };
 };
 

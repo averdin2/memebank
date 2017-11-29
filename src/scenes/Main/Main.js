@@ -9,7 +9,8 @@ export default class _Main extends Component {
   }
 
   render () {
-    const bank = <Bank/>;
+
+    const bank = this.props.banks ? <Bank /> : null;
     return <div className='Main'>{bank}</div>;
   }
 }
