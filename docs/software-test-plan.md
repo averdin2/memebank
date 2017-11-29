@@ -10,11 +10,19 @@
   - 10.1.1.6 Unit Test 6 - Add Tags Test -- Make sure that memes have the specified tags when given said values.
   - 10.1.1.7 Unit Test 7 - Tag System Test -- This test will make sure when clicking a tag it will show the tags
   - 10.1.1.8 Unit Test 8 - Meme Database Test -- When adding an meme to a users bank it will make sure that the meme is in a database.
-  - 10.1.1.9 Unit Test 9 - Delete Meme Test - This test will make sure that when a user delete it updates properly and gets rid of the meme from view, database, and the tags are removed as well if it is the only photo in that tag. 
+  - 10.1.1.9 Unit Test 9 - Delete Meme Test - This test will make sure that when a user delete it updates properly and gets rid of the meme from view, database, and the tags are removed as well if it is the only photo in that tag.
 
 
 ## 10.2 Integration Test Plan
 - 10.2.1 Integration Test Descriptions
-  -  10.2.1.1  Integration Test 1 - Add User Test Integration --
+  -  10.2.1.1  Integration Test 1 - Add User Test Integration -- When this test is run, the user will create a new profile and an error will be thrown if the profile is not successfully created.
+  - 10.2.1.2 Integration Test 2 - User Login Test -- This test will throw an error if the user is not able to login to their profile.
+  - 10.2.1.3 Integration Test 3 - Create Bank Test --
+  - 10.2.1.4 Integration Test 4 - Add Users to Bank Testing --
+  - 10.2.1.5 Integration Test 5 - Add Meme Test --
+  - 10.2.1.6 Integration Test 6 - Add Tags Test --
+  - 10.2.1.7 Integration Test 7 - Tag System Test --
+  - 10.2.1.8 Integration Test 8 - Meme Database Test --
+  - 10.2.1.9 Integration Test 9 - Delete Meme Test -- 
 
 ## 10.3 Module Dependencies
