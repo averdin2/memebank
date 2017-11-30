@@ -41,7 +41,7 @@ export default class ViewBank extends Component {
       monitorImagesLoaded: true,
 
       // Layout
-      columnWidth: '33%',
+      columnWidth: '25%',
       gutterWidth: 10,
       gutterHeight: 10,
 

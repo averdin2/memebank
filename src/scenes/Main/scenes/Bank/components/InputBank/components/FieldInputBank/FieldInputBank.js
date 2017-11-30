@@ -9,3 +9,8 @@ export default class FieldInputBank extends Component {
     return <div className='FieldInputBank'>{field}</div>;
   }
 }
+
+FieldInputBank.defaultProps = {
+  type: 'text',
+  spellcheck: 'false',
+};

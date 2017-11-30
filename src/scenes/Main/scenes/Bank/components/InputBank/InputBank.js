@@ -31,6 +31,7 @@ export default class InputBank extends Component {
   render () {
 
     const fieldProps = {
+      placeholder: 'Enter an image or gif link...',
       value: this.state.input,
       onChange: this.handleInputChange,
       onKeyPress: this.handleKeySubmit,
