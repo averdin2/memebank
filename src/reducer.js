@@ -1,8 +1,12 @@
 import { combineReducers } from 'redux';
-import Bank from './scenes/Bank/services/reducer.js';
+import token from './services/reducer.js';
+import Bank from './scenes/Main/services/reducer.js';
+import cards from './scenes/Main/scenes/Bank/services/reducer.js';
 
 const Root = combineReducers({
-  Bank
+  token,
+  Bank,
+  cards
 });
 
 export default Root;

@@ -8,8 +8,3 @@ body {
 input:focus, select:focus, textarea:focus, button:focus {
     outline: none;
 }
-
-/* Show cursor pointer when hovering links */
-a:hover {
-  cursor: pointer;
-}

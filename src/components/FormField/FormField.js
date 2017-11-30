@@ -3,8 +3,6 @@ import './FormField.css';
 
 export default class FormField extends Component {
   render () {
-
-    // Text field element
     return <input className='FormField' {...this.props} />;
   }
 }
