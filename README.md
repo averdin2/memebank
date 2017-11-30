@@ -17,4 +17,4 @@
   serve -s build
  ```
 
-[CORS problems?](https://goo.gl/oQNhwh)
+[Memebank API](https://github.com/aherco/memebank-api)
