@@ -27,6 +27,7 @@ const accountMiddleware = store => next => action => {
         /* eslint-disable */
         console.log('CREATE_USER success');
         /* eslint-enable */
+        window.location.href = '/';
         return;
       });
     break;

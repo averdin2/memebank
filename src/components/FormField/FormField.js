@@ -9,5 +9,5 @@ export default class FormField extends Component {
 
 FormField.defaultProps = {
   type: 'text',
-  spellcheck: 'false',
+  spellCheck: 'false',
 };

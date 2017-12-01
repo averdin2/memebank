@@ -12,5 +12,5 @@ export default class FieldInputBank extends Component {
 
 FieldInputBank.defaultProps = {
   type: 'text',
-  spellcheck: 'false',
+  spellCheck: 'false',
 };
