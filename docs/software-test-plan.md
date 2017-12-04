@@ -26,3 +26,5 @@
   - 10.2.1.9 Integration Test 9 - Delete Meme Test -- This test will make sure that a meme is no longer in the database or front end after it is removed. If the meme still appears then an error will be thrown.
 
 ## 10.3 Module Dependencies
+
+![Test Module Dependencies](test-module-dependencies.jpg)
