@@ -12,7 +12,8 @@ const mapStateToProps = (state) => {
   return {
     cards: state.cards,
     token: state.token,
-    banks: state.Bank.banks
+    banks: state.Bank.banks,
+    active: state.Bank.active,
   };
 };
 

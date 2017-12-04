@@ -8,3 +8,8 @@ body {
 input:focus, select:focus, textarea:focus, button:focus {
     outline: none;
 }
+
+/*Remove scrollbars*/
+::-webkit-scrollbar {
+    display: none;
+}

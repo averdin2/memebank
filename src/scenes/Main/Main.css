@@ -1,0 +1,12 @@
+.BankList {
+  position: fixed;
+  width: 6%;
+  top: 0;
+  left: 0;
+}
+
+.Bank {
+  width: 80%;
+  margin-top: 2%;
+  margin-left: 13%;
+}

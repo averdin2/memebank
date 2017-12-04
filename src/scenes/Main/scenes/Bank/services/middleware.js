@@ -52,7 +52,6 @@ const cardMiddleware = store => next => action => {
         /* eslint-enable */
 
         // ADD_CARD
-        /* Middleware actions don't chain */
         request.post(api + `banks/${action.bank}/cards`)
           .send({ card: { src: action.src } })
           .set('Authorization', `Bearer ${action.token}`)

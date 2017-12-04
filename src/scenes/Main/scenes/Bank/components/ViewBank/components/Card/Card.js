@@ -39,7 +39,6 @@ export default class Card extends Component {
   render () {
 
     const cardProps = {
-      ...this.props,
       onMouseEnter: this.showButtons,
       onMouseLeave: this.hideButtons,
     };

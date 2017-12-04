@@ -2,7 +2,9 @@ import { connect } from 'react-redux';
 import _Main from './Main';
 
 import {
-  getBanks
+  getBanks,
+  addBank,
+  updateActiveBank
 } from './services/actions.js';
 
 const mapStateToProps = (state) => {
@@ -15,6 +17,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     getBanks: (token) => { dispatch(getBanks(token)); },
+    addBank: (token) => { dispatch(addBank(token)); },
+    updateActiveBank: (id) => { dispatch(updateActiveBank(id)); },
   };
 };
 
