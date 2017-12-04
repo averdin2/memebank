@@ -10,3 +10,7 @@
   transition-duration: 0.2s;
   border-radius: 30%;
 }
+
+.IconBankList:active {
+  filter: brightness(110%);
+}

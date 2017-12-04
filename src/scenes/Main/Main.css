@@ -1,8 +1,6 @@
 .BankList {
   position: fixed;
-  height: 100%;
   width: 6%;
-  overflow-x: hidden;
   top: 0;
   left: 0;
 }

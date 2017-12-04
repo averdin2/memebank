@@ -1,4 +1,6 @@
 .BankList {
+  height: 100%;
+  overflow-x: hidden;
   background-color: #353535;
 }
 
