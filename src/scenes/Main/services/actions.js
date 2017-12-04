@@ -2,7 +2,8 @@ import {
   GET_BANKS,
   GET_BANKS_SUCCESS,
   ADD_BANK,
-  ADD_BANK_SUCCESS
+  ADD_BANK_SUCCESS,
+  UPDATE_ACTIVE_BANK
 } from './actionTypes.js';
 
 export const getBanks = (token) => {
@@ -30,5 +31,12 @@ export const addBankSuccess = (bank) => {
   return {
     type: ADD_BANK_SUCCESS,
     bank: bank,
+  };
+};
+
+export const updateActiveBank = (id) => {
+  return {
+    type: UPDATE_ACTIVE_BANK,
+    id: id,
   };
 };

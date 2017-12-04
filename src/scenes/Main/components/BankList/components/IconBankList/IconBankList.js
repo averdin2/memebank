@@ -5,7 +5,14 @@ import './IconBankList.css';
 
 export default class IconBankList extends Component {
 
+  updateActiveBank = () => {
+    this.props.updateActiveBank(this.props.id);
+  }
+
   render () {
-    return <div className='IconBankList'> </div>;
+    const iconProps = {
+      onClick: this.updateActiveBank,
+    };
+    return <div className='IconBankList' {...iconProps}> </div>;
   }
 }

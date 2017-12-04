@@ -6,12 +6,16 @@ import IconBankList from './components/IconBankList/IconBankList';
 // Style
 import './BankList.css';
 
-export default class _BankList extends Component {
+export default class BankList extends Component {
+  componentWillMount () {
+    this.props.updateActiveBank(this.props.banks[0].id);
+  }
 
   stuffBank = (props) => {
     const bankProps = {
       ...props,
       key: props.id,
+      updateActiveBank: this.props.updateActiveBank,
     };
     return <IconBankList {...bankProps}/>;
   }

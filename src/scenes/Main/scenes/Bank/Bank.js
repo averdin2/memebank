@@ -19,7 +19,7 @@ export default class _Bank extends Component {
     );
 
     const viewProps = {
-      active: this.props.banks[0].id,
+      active: this.props.active,
       token: this.props.token,
       cards: this.props.cards,
       deleteCard: this.props.deleteCard,
@@ -27,7 +27,7 @@ export default class _Bank extends Component {
     };
 
     const inputProps = {
-      active: this.props.banks[0].id,
+      active: this.props.active,
       token: this.props.token,
       addCard: this.props.addCard,
     };
