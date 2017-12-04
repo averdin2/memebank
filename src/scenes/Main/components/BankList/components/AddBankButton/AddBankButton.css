@@ -1,0 +1,22 @@
+.AddBankButton {
+  width: 63%;
+  height: 0;
+  padding-bottom: 63%;
+  border-radius: 50%;
+  border: 4px dashed #F5B7B1;
+  text-align: center;
+  vertical-align: middle;
+  color: #F5B7B1;
+  -webkit-user-select: none;
+}
+
+.AddBankButton:hover {
+  cursor: pointer;
+  transition-duration: 30s;
+  transform: rotate(2160deg);
+}
+
+.AddBankButton:active {
+  transition-duration: 1s;
+  border-style: double;
+}
