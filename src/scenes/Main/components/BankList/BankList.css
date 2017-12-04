@@ -1,0 +1,10 @@
+.BankList {
+  background-color: #353535;
+}
+
+.IconBankList {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 15%;
+}

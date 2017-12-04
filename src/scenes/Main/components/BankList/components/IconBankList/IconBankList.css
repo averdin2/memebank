@@ -1,0 +1,12 @@
+.IconBankList {
+  width: 70%;
+  height: 0;
+  padding-bottom: 70%;
+  border-radius: 50%;
+  background: #4679BD;
+}
+
+.IconBankList:hover {
+  transition-duration: 0.5s;
+  border-radius: 30%;
+}

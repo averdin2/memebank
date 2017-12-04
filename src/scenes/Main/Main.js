@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 
 // Nested Components
+import BankList from './components/BankList/BankList';
 import Bank from './scenes/Bank/container.js';
+
+// Style
+import './Main.css';
 
 export default class _Main extends Component {
   componentWillMount () {
@@ -9,8 +13,8 @@ export default class _Main extends Component {
   }
 
   render () {
-
+    const list = <BankList/>;
     const bank = this.props.banks ? <Bank /> : null;
-    return <div className='Main'>{bank}</div>;
+    return <div className='Main'>{list}{bank}</div>;
   }
 }
