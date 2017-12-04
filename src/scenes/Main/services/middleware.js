@@ -2,13 +2,17 @@ import request from 'superagent';
 
 import {
   GET_BANKS,
-  ADD_BANK
+  ADD_BANK,
+  UPDATE_ACTIVE_BANK,
 } from './actionTypes';
 
 import {
+  getBanks,
   getBanksSuccess,
   addBankSuccess
 } from './actions.js';
+
+import { getCards } from './../scenes/Bank/services/actions.js';
 
 const api = 'https://api.memebank.life/';
 
@@ -35,9 +39,9 @@ const bankMiddleware = store => next => action => {
     break;
 
   case ADD_BANK:
-    request.get(api + 'banks')
-      .set('Authorization', `Bearer ${action.token}`)
+    request.post(api + 'banks')
       .send({ bank: { title: action.title } })
+      .set('Authorization', `Bearer ${action.token}`)
       .end((err, res) => {
         if (err) {
           /* eslint-disable */
@@ -51,6 +55,9 @@ const bankMiddleware = store => next => action => {
         return next(addBankSuccess(res.body));
       });
     break;
+
+  case UPDATE_ACTIVE_BANK:
+    return store.dispatch(getCards(action.id));
 
   default:
     break;

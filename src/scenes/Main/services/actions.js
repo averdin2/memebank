@@ -24,6 +24,7 @@ export const addBank = (token) => {
   return {
     type: ADD_BANK,
     title: 'new bank',
+    token: token,
   };
 };
 
