@@ -12,11 +12,12 @@
 
 .AddBankButton:hover {
   cursor: pointer;
-  transition-duration: 30s;
+  transition-duration: 1s;
   transform: rotate(2160deg);
 }
 
 .AddBankButton:active {
   transition-duration: 1s;
+  filter: brightness(110%);
   border-style: double;
 }
