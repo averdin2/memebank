@@ -28,8 +28,8 @@ export default class ViewBank extends Component {
 
     const cards = [];
 
-    for (const i in this.props.cards) {
-      cards.unshift(this.stuffCard(this.props.cards[i]));
+    for (const card in this.props.cards) {
+      cards.unshift(this.stuffCard(this.props.cards[card]));
     }
 
     const gridProps = {

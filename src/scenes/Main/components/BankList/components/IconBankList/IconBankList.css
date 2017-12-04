@@ -7,6 +7,6 @@
 }
 
 .IconBankList:hover {
-  transition-duration: 0.5s;
+  transition-duration: 0.2s;
   border-radius: 30%;
 }
