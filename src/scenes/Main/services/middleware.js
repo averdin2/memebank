@@ -7,7 +7,6 @@ import {
 } from './actionTypes';
 
 import {
-  getBanks,
   getBanksSuccess,
   addBankSuccess
 } from './actions.js';

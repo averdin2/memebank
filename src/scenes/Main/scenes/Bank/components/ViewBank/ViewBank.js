@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import request from 'superagent';
 
 // Nested Components
 import StackGrid from 'react-stack-grid';
@@ -11,6 +12,17 @@ export default class ViewBank extends Component {
 
   updateLayout = () => {
     this.grid.updateLayout();
+  }
+
+  validSrc = (card) => {
+    return request.head(card.src)
+      .end((err, res) => {
+        if (err) {
+          this.props.deleteCard(card.id, this.props.active, this.props.token);
+          return false;
+        }
+        return true;
+      });
   }
 
   stuffCard = (props) => {
@@ -29,7 +41,9 @@ export default class ViewBank extends Component {
     const cards = [];
 
     for (const card in this.props.cards) {
-      cards.unshift(this.stuffCard(this.props.cards[card]));
+      if (this.validSrc(this.props.cards[card])) {
+        cards.unshift(this.stuffCard(this.props.cards[card]));
+      }
     }
 
     const gridProps = {
