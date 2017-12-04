@@ -17,6 +17,7 @@ export default class _Main extends Component {
     const listProps = {
       token: this.props.token,
       banks: this.props.banks,
+      active: this.props.active,
       addBank: this.props.addBank,
       updateActiveBank: this.props.updateActiveBank,
     };

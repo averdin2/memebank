@@ -20,6 +20,7 @@ export default class BankList extends Component {
     const bankProps = {
       ...props,
       key: props.id,
+      active: this.props.active,
       updateActiveBank: this.props.updateActiveBank,
     };
     return <IconBankList {...bankProps}/>;

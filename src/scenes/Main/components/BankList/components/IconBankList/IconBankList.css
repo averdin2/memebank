@@ -15,3 +15,11 @@
 .IconBankList:active {
   filter: brightness(110%);
 }
+
+.ActiveBankIcon {
+  position: relative;
+  top: 1em;
+  right: 1em;
+  color: white;
+
+}

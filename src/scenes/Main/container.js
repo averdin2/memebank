@@ -11,6 +11,7 @@ const mapStateToProps = (state) => {
   return {
     token: state.token,
     banks: state.Bank.banks,
+    active: state.Bank.active,
   };
 };
 
