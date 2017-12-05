@@ -3,12 +3,15 @@ import request from 'superagent';
 import {
   GET_BANKS,
   ADD_BANK,
+  DELETE_BANK,
   UPDATE_ACTIVE_BANK,
 } from './actionTypes';
 
 import {
   getBanksSuccess,
-  addBankSuccess
+  addBankSuccess,
+  deleteBankSuccess,
+  updateActiveBank
 } from './actions.js';
 
 import { getCards } from './../scenes/Bank/services/actions.js';
@@ -51,7 +54,28 @@ const bankMiddleware = store => next => action => {
         /* eslint-disable */
         console.log('ADD_BANK success');
         /* eslint-enable */
-        return next(addBankSuccess(res.body));
+        const bank = res.body;
+        next(addBankSuccess(bank));
+        return store.dispatch(updateActiveBank(bank.id));
+      });
+    break;
+
+  case DELETE_BANK:
+    request.del(api + `banks/${action.id}`)
+      .set('Authorization', `Bearer ${action.token}`)
+      .end((err, res) => {
+        if (err) {
+          /* eslint-disable */
+          console.log('DELETE_BANK fail');
+          /* eslint-enable */
+          return;
+        }
+        /* eslint-disable */
+        console.log('DELETE_BANK success');
+        /* eslint-enable */
+        next(deleteBankSuccess(action.id));
+        const lastBank = store.getState().Bank.banks[store.getState().Bank.banks.length - 1];
+        return store.dispatch(updateActiveBank(lastBank.id));
       });
     break;
 

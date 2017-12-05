@@ -2,18 +2,26 @@
   height: 100%;
   overflow-x: hidden;
   background-color: #353535;
+  text-align: center;
 }
 
 .IconBankList {
   display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 20%;
+  margin-bottom: 20%;
   margin-left: 15%;
 }
 
 .AddBankButton {
   display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 20%;
+  margin-bottom: 20%;
   margin-left: 15%;
+}
+
+.DeleteBankButton {
+  display: block;
+  position: absolute;
+  bottom: 2%;
+  margin-left: 25%;
 }
