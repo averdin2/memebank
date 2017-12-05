@@ -42,11 +42,8 @@ export default class _Join extends Component {
   handleSubmit = () => {
     let errors = [];
     const validate = () => {
-      if(!this.state.email){
-        errors.email = "no email";
-      }
       if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(this.state.email)) {
-        errors.email = 'Invalid email address';
+        errors.push('Invalid email address');
       }
       return errors;
     };
@@ -62,7 +59,6 @@ export default class _Join extends Component {
       }
     }
     errors = [];
-    console.log(errors + "different");
   }
 
   handleKeySubmit = (event) => {
