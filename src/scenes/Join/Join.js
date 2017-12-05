@@ -40,10 +40,29 @@ export default class _Join extends Component {
   }
 
   handleSubmit = () => {
+    let errors = [];
+    const validate = () => {
+      if(!this.state.email){
+        errors.email = "no email";
+      }
+      if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(this.state.email)) {
+        errors.email = 'Invalid email address';
+      }
+      return errors;
+    };
+    validate();
     if (this.state.password === this.state.passwordConfirmation) {
-      this.props.createUser(this.state.email, this.state.username, this.state.password);
-      this.setState({ email: '', username: '', password: '', passwordConfirmation: '' });
+      if(errors.length === 0){
+        this.props.createUser(this.state.email, this.state.username, this.state.password);
+        this.setState({ email: '', username: '', password: '', passwordConfirmation: '' });
+      }
+      else{
+        console.log(errors);
+        console.log("Can't make user");
+      }
     }
+    errors = [];
+    console.log(errors + "different");
   }
 
   handleKeySubmit = (event) => {
