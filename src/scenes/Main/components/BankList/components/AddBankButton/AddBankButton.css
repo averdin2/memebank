@@ -3,10 +3,8 @@
   height: 0;
   padding-bottom: 63%;
   border-radius: 50%;
-  border: 4px dashed #F5B7B1;
-  text-align: center;
+  border: 2px dashed #F5B7B1;
   color: #F5B7B1;
-  -webkit-user-select: none;
 }
 
 .AddBankButton:hover {
@@ -20,5 +18,5 @@
   filter: brightness(110%);
   border: double #4679BD;
   border-radius: 50%;
-  color: #4679BD;
+  background: #4679BD;
 }

@@ -7,21 +7,21 @@
 
 .IconBankList {
   display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 20%;
+  margin-bottom: 20%;
   margin-left: 15%;
 }
 
 .AddBankButton {
   display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 20%;
+  margin-bottom: 20%;
   margin-left: 15%;
 }
 
 .DeleteBankButton {
   display: block;
   position: absolute;
-  bottom: 0;
+  bottom: 2%;
   margin-left: 15%;
 }
