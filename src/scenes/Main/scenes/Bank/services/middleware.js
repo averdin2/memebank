@@ -45,7 +45,7 @@ const cardMiddleware = store => next => action => {
           /* eslint-disable */
           console.log('VALIDATE_ADD_CARD fail');
           /* eslint-enable */
-          return;
+          return alert('Invalid url');
         }
         /* eslint-disable */
         console.log('VALIDATE_ADD_CARD success');

@@ -80,7 +80,7 @@ const bankMiddleware = store => next => action => {
     break;
 
   case UPDATE_ACTIVE_BANK:
-    return store.dispatch(getCards(action.id));
+    return next(getCards(action.id));
 
   default:
     break;

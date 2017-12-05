@@ -40,7 +40,7 @@ const accountMiddleware = store => next => action => {
           /* eslint-disable */
           console.log('LOGIN_USER fail');
           /* eslint-enable */
-          return;
+          return alert('Invalid email or password');
         }
         /* eslint-disable */
         console.log('LOGIN_USER success');
