@@ -4,6 +4,7 @@ import _Main from './Main';
 import {
   getBanks,
   addBank,
+  deleteBank,
   updateActiveBank
 } from './services/actions.js';
 
@@ -19,6 +20,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     getBanks: (token) => { dispatch(getBanks(token)); },
     addBank: (token) => { dispatch(addBank(token)); },
+    deleteBank: (id, token) => { dispatch(deleteBank(id, token)); },
     updateActiveBank: (id) => { dispatch(updateActiveBank(id)); },
   };
 };

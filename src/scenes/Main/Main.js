@@ -19,6 +19,7 @@ export default class _Main extends Component {
       banks: this.props.banks,
       active: this.props.active,
       addBank: this.props.addBank,
+      deleteBank: this.props.deleteBank,
       updateActiveBank: this.props.updateActiveBank,
     };
 

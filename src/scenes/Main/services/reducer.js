@@ -3,6 +3,7 @@ import { combineReducers } from 'redux';
 import {
   GET_BANKS_SUCCESS,
   ADD_BANK_SUCCESS,
+  DELETE_BANK_SUCCESS,
   UPDATE_ACTIVE_BANK
 } from './actionTypes.js';
 
@@ -14,6 +15,9 @@ const banks = (state = null, action) => {
 
   case ADD_BANK_SUCCESS:
     return [...state, action.bank];
+
+  case DELETE_BANK_SUCCESS:
+    return state.filter(bank => bank.id !== action.id);
 
   default:
     return state;

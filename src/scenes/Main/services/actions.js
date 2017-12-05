@@ -3,6 +3,8 @@ import {
   GET_BANKS_SUCCESS,
   ADD_BANK,
   ADD_BANK_SUCCESS,
+  DELETE_BANK,
+  DELETE_BANK_SUCCESS,
   UPDATE_ACTIVE_BANK
 } from './actionTypes.js';
 
@@ -32,6 +34,21 @@ export const addBankSuccess = (bank) => {
   return {
     type: ADD_BANK_SUCCESS,
     bank: bank,
+  };
+};
+
+export const deleteBank = (id, token) => {
+  return {
+    type: DELETE_BANK,
+    id: id,
+    token: token,
+  };
+};
+
+export const deleteBankSuccess = (id) => {
+  return {
+    type: DELETE_BANK_SUCCESS,
+    id: id,
   };
 };
 

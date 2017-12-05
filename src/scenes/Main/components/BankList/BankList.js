@@ -17,6 +17,13 @@ export default class BankList extends Component {
     this.props.addBank(this.props.token);
   }
 
+  deleteBank = () => {
+    if (this.props.banks.length != 1) {
+      this.props.deleteBank(this.props.active, this.props.token);
+    }
+
+  }
+
   stuffBank = (props) => {
     const bankProps = {
       ...props,
@@ -34,7 +41,7 @@ export default class BankList extends Component {
     }
 
     const plus = <AddBankButton onClick={this.addBank}/>;
-    const minus = <DeleteBankButton/>;
+    const minus = <DeleteBankButton onClick={this.deleteBank}/>;
 
     return <div className='BankList'>{banks}{plus}{minus}</div>;
   }
