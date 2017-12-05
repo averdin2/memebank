@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 // Nested Components
-import DeleteButton from './components/DeleteButton/DeleteButton';
+import DeleteCardButton from './components/DeleteCardButton/DeleteCardButton';
 
 // Style
 import './Card.css';
@@ -48,7 +48,7 @@ export default class Card extends Component {
     };
 
     const image = this.imageCard(this.props);
-    const button = this.state.hover ? <DeleteButton {...buttonProps} /> : null;
+    const button = this.state.hover ? <DeleteCardButton {...buttonProps} /> : null;
 
     return <div className='Card' {...cardProps}>{button}{image}</div>;
   }

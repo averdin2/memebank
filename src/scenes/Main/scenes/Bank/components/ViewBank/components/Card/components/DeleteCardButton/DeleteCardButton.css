@@ -1,4 +1,4 @@
-.DeleteButton {
+.DeleteCardButton {
   margin: 0.3em;
   height: 1.5em;
   width: 1.5em;
@@ -6,10 +6,10 @@
   color: #F5B7B1;
 }
 
-.DeleteButton:hover {
+.DeleteCardButton:hover {
   filter: brightness(110%);
 }
 
-.DeleteButton:active {
+.DeleteCardButton:active {
   filter: brightness(90%);
 }

@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 // Nested components
 import IconBankList from './components/IconBankList/IconBankList';
 import AddBankButton from './components/AddBankButton/AddBankButton';
+import DeleteBankButton from './components/DeleteBankButton/DeleteBankButton';
 
 // Style
 import './BankList.css';
@@ -33,7 +34,8 @@ export default class BankList extends Component {
     }
 
     const plus = <AddBankButton onClick={this.addBank}/>;
+    const minus = <DeleteBankButton/>;
 
-    return <div className='BankList'>{banks}{plus}</div>;
+    return <div className='BankList'>{banks}{plus}{minus}</div>;
   }
 }
