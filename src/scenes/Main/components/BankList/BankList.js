@@ -18,7 +18,7 @@ export default class BankList extends Component {
   }
 
   deleteBank = () => {
-    if (this.props.banks.length != 1) {
+    if (this.props.banks.length !== 1) {
       this.props.deleteBank(this.props.active, this.props.token);
     }
 
