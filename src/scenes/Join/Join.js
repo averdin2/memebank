@@ -44,8 +44,19 @@ export default class _Join extends Component {
     const validate = () => {
       if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(this.state.email)) {
         errors.push('Invalid email address');
+        alert('Invalid email address');
       }
-      return errors;
+      if (!this.state.username) {
+        errors.push('Required Username');
+        alert('Username is required');
+      } else if (this.state.username.length < 4) {
+        errors.push('Username must be 4 characters or more');
+        alert('Username must be 4 characters or more');
+      }
+      if (!this.state.password) {
+        errors.push('Required Password');
+        alert('Password is required');
+      }
     };
     validate();
     if (this.state.password === this.state.passwordConfirmation) {
