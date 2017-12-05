@@ -2,6 +2,7 @@
   height: 100%;
   overflow-x: hidden;
   background-color: #353535;
+  text-align: center;
 }
 
 .IconBankList {
@@ -22,7 +23,5 @@
   display: block;
   position: absolute;
   bottom: 0;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  margin-left: 30%;
+  margin-left: 15%;
 }
